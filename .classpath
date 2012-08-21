@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_05"/>
+	<classpathentry kind="lib" path="D:/WORKSPACE_JUNO/library/com.jar"/>
+	<classpathentry kind="lib" path="D:/WORKSPACE_JUNO/library/gnu.jar"/>
+	<classpathentry kind="lib" path="D:/WORKSPACE_JUNO/library/org.jar"/>
+	<classpathentry kind="lib" path="D:/WORKSPACE_JUNO/library/se.jar"/>
+	<classpathentry kind="lib" path="D:/WORKSPACE_JUNO/library/zombie.jar"/>
+	<classpathentry kind="lib" path="D:/WORKSPACE_JUNO/library/lwjgl.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/WORKSPACE_JUNO/Project Zomboid/library"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/WORKSPACE_JUNO/library/lwjgl_util.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
