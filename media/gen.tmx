@@ -1,0 +1,3424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="150" height="150" tilewidth="64" tileheight="32">
+ <tileset firstgid="1" name="TileFloorExt" tilewidth="64" tileheight="128">
+  <image source="TileFloorExt.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="noStart" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="interior" value="false"/>
+    <property name="solidfloor" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="65" name="TileFloorInt" tilewidth="64" tileheight="128">
+  <image source="TileFloorInt.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="invisible" value=""/>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="" value=""/>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="129" name="TileWalls" tilewidth="64" tileheight="128">
+  <image source="TileWalls.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="cutW" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="cutN" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="WallW" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="WallN" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="WallNW" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="WallSE" value=""/>
+    <property name="unflamable" value=""/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="WallW" value=""/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="WallN" value=""/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="WallNW" value=""/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="WallSE" value=""/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="WindowW" value=""/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="WindowN" value=""/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="DoorWallW" value=""/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="DoorWallN" value=""/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="193" name="TileWalls2" tilewidth="64" tileheight="128">
+  <image source="TileWalls2.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparent" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparent" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparent" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparent" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="picket" value=""/>
+    <property name="transparentW" value=""/>
+    <property name="wallW" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="picket" value=""/>
+    <property name="transparentN" value=""/>
+    <property name="wallN" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="WallNW" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+    <property name="picket" value=""/>
+    <property name="transparentN" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparent" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparent" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cunN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparent" value=""/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparent" value=""/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="257" name="TileWallsBurnt" tilewidth="64" tileheight="128">
+  <image source="TileWallsBurnt.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="321" name="TileFrames" tilewidth="64" tileheight="128">
+  <image source="TileFrames.png" width="512" height="1024"/>
+  <tile id="8">
+   <properties>
+    <property name="windowW" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="windowN" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="windowW" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="windowN" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="385" name="TileObjects" tilewidth="64" tileheight="128">
+  <image source="TileObjects.png" width="1024" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="" value=""/>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableNW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="" value=""/>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableN" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableNE" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableE" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableSE" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableSW" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableW" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="container" value="stove"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="container" value="stove"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="container" value="stove"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="container" value="stove"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="container" value="fridge"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="container" value="fridge"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="container" value="sidetable"/>
+    <property name="pushable" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="container" value="sidetable"/>
+    <property name="pushable" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="shelfE" value=""/>
+    <property name="shelfS" value=""/>
+    <property name="tableE" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="shelfS" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="shelfE" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="pushable" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="pushable" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="radio" value=""/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="" value=""/>
+    <property name="bedTopN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="bedTopW" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="bedBottomW" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="floorE" value=""/>
+    <property name="floorS" value=""/>
+    <property name="shelfE" value=""/>
+    <property name="shelfS" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableE" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="floorS" value=""/>
+    <property name="shelfS" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="floorE" value=""/>
+    <property name="shelfE" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableE" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="container" value="till"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="container" value="till"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="container" value="vendingsnacks"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="container" value=""/>
+    <property name="solidtrans" value="vendingsnacks"/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="container" value="medicine"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="container" value="medicine"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="table" value="NW"/>
+   </properties>
+  </tile>
+  <tile id="71">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableN" value=""/>
+   </properties>
+  </tile>
+  <tile id="72">
+   <properties>
+    <property name="container" value=""/>
+    <property name="solidtrans" value="counter"/>
+   </properties>
+  </tile>
+  <tile id="73">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableE" value=""/>
+   </properties>
+  </tile>
+  <tile id="74">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="76">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="container" value="counter"/>
+    <property name="solidtrans" value=""/>
+    <property name="tableW" value=""/>
+   </properties>
+  </tile>
+  <tile id="78">
+   <properties>
+    <property name="container" value="vendingpop"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="79">
+   <properties>
+    <property name="container" value="vendingpop"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="floorE" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableE" value=""/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="floorS" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="floorS" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="91">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="94">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="95">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="98">
+   <properties>
+    <property name="solidtrans" value=""/>
+    <property name="tableW" value=""/>
+   </properties>
+  </tile>
+  <tile id="99">
+   <properties>
+    <property name="solidtrans" value=""/>
+    <property name="tableE" value=""/>
+   </properties>
+  </tile>
+  <tile id="100">
+   <properties>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="101">
+   <properties>
+    <property name="solidtrans" value=""/>
+    <property name="tableN" value=""/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="106">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="107">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="108">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="109">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="110">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="111">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="112">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="113">
+   <properties>
+    <property name="bedBottomN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="114">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="115">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="116">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="117">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="118">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="119">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="121">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="122">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="125">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="126">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="127">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="513" name="TileTrees" tilewidth="64" tileheight="128">
+  <image source="TileTrees.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="solid" value=""/>
+    <property name="vegitation" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="solid" value=""/>
+    <property name="vegitation" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="solid" value=""/>
+    <property name="vegitation" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="solid" value=""/>
+    <property name="vegitation" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="vegitation" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="vegitation" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="vegitation" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="577" name="TileStairs" tilewidth="64" tileheight="128">
+  <image source="TileStairs.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="stairsBW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="stairsMW" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="stairsTW" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="stairsBW" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="stairsMW" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="stairsTW" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="stairsBN" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="stairsMN" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="stairsTN" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="stairsBN" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="stairsMN" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="stairsTN" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="stairsBW" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="stairsMW" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="stairsTW" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="stairsBN" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="stairsMN" value=""/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="stairsTN" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="afterchar" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="afterchar" value=""/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="afterchar" value=""/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="afterchar" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="641" name="TileDoors" tilewidth="64" tileheight="128">
+  <image source="TileDoors.png" width="512" height="1024"/>
+  <tile id="8">
+   <properties>
+    <property name="doorW" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="doorN" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="doorN" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="doorW" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="doorW" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="doorN" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="705" name="TileBarricade" tilewidth="64" tileheight="128">
+  <image source="TileBarricade.png" width="512" height="1024"/>
+  <tile id="8">
+   <properties>
+    <property name="doorBarracadeW" value=""/>
+    <property name="windowBarracadeW" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="doorBarracadeN" value=""/>
+    <property name="windowBarracadeN" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="769" name="BloodWalls" tilewidth="64" tileheight="128">
+  <image source="BloodWalls.png" width="512" height="1024"/>
+ </tileset>
+ <tileset firstgid="833" name="BloodFloor" tilewidth="64" tileheight="128">
+  <image source="BloodFloor.png" width="512" height="1024"/>
+ </tileset>
+ <tileset firstgid="897" name="TileFloorBurnt" tilewidth="64" tileheight="128">
+  <image source="TileFloorBurnt.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="961" name="TileWalls3" tilewidth="64" tileheight="128">
+  <image source="TileWalls3.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="barricadeDoorFrame" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="1025" name="TileWalls4" tilewidth="64" tileheight="128">
+  <image source="TileWalls4.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="" value=""/>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparentW" value=""/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparentN" value=""/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="1089" name="TileBar" tilewidth="64" tileheight="128">
+  <image source="TileBar.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="WallN" value=""/>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="wallW" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="collideW" value=""/>
+    <property name="cutN" value=""/>
+    <property name="cutW" value=""/>
+    <property name="wallNW" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="collideW" value=""/>
+    <property name="cutW" value=""/>
+    <property name="transparent" value=""/>
+    <property name="windowW" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="collideN" value=""/>
+    <property name="cutN" value=""/>
+    <property name="transparent" value=""/>
+    <property name="windowN" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="DoorWallW" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="DoorWallN" value=""/>
+    <property name="cutN" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="WallSE" value=""/>
+    <property name="cutW" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="solidfloor" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="floorS" value=""/>
+    <property name="shelfS" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="floorS" value=""/>
+    <property name="shelfS" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="floorS" value=""/>
+    <property name="shelfS" value=""/>
+    <property name="solidtrans" value=""/>
+    <property name="tableS" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="1153" name="TileBank" tilewidth="64" tileheight="128">
+  <image source="TileBank.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="WallW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="WallN" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="WallNW" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="WallSE" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="WindowW" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="WindowN" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="WallSE" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="WindowW" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="WindowN" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="DoorWallW" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="DoorWallN" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="DoorWallW" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="DoorWallW" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="doowW" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="doorN" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="doorW" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="doorN" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="1217" name="TileObjectsExt" tilewidth="64" tileheight="128">
+  <image source="TileObjectsExt.png" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="1345" name="TileObjects2" tilewidth="64" tileheight="128">
+  <image source="TileObjects2.png" width="1024" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="container" value="crate"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="container" value="crate"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="container" value="crate"/>
+    <property name="solid" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="container" value="vendingsnacks"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="container" value="vendingsnacks"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="container" value="vendingsnacks"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="container" value="vendingsnacks"/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="container" value="wardrobe"/>
+    <property name="linkN" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="container" value="wardrobe"/>
+    <property name="linkS" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="container" value="wardrobe"/>
+    <property name="linkE" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="container" value="wardrobe"/>
+    <property name="linkW" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="jukebox" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="jukebox" value=""/>
+    <property name="solidtrans" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="1473" name="TileObjects3" tilewidth="64" tileheight="128">
+  <image source="TileObjects3.png" width="512" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="curtainW" value=""/>
+    <property name="sheetCurtains" value=""/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="curtainW" value=""/>
+    <property name="sheetCurtains" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="curtainW" value=""/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="curtainE" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="curtainN" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="curtainS" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+</map>

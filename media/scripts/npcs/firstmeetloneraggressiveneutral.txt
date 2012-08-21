@@ -1,0 +1,234 @@
+module Base
+{
+
+	randomselector FirstMeetLonerAggressiveNeutral
+	{
+		FirstMeetLonerAggressiveNeutral1,
+		FirstMeetLonerAggressiveNeutral2,
+		FirstMeetLonerAggressiveNeutral3,
+		FirstMeetLonerAggressiveNeutral4,
+		FirstMeetLonerAggressiveNeutral5,
+		FirstMeetLonerAggressiveNeutral6,
+		FirstMeetLonerAggressiveNeutral7,
+		FirstMeetLonerAggressiveNeutral8,
+		FirstMeetLonerAggressiveNeutral9,
+		FirstMeetLonerAggressiveNeutral10,
+	}
+
+	instancescript FirstMeetLonerAggressiveNeutral1
+	{
+		Other.SayIdle(
+				"I need some help taking these dead guys down. You in?"
+			);
+		Met.SayIdle(
+				"With you? Are you crazy? No sir..."
+			);
+		Other.Anger(20);
+		Other.SayIdle(
+				"Fine! Have it your way!"
+			);
+		Other.SayIdle(
+				"Try to remember me when I'm knocking your cold, dead head off in a week or two..."
+			);
+		Met.Anger(40);
+	}
+	
+	instancescript FirstMeetLonerAggressiveNeutral2
+	{
+		Other.SayIdle(
+				"These bastards. They just keep on coming."
+			);
+		Other.SayIdle(
+				"Want to help? Clear the area?"
+			);
+		Met.SayIdle(
+				"Are you kidding? You'll be dead in a couple of hours."
+			);
+		Other.Anger(40);
+			
+		Other.SayIdle(
+				"I've survived this long asshole."
+			);
+		Met.Anger(40);
+		Met.SayIdle(
+				"Then you can keep on going without me..."
+			);
+	}
+
+	instancescript FirstMeetLonerAggressiveNeutral3
+	{
+		Other.SayIdle(
+				"Hey, I'm clearing the Neighborhood. Want in?"
+			);
+		Met.SayIdle(
+				"Y'know, I've have been thinking about suicide."
+			);
+		Met.SayIdle(
+				"But not like that buddy. Not with you."
+			);
+		Other.Anger(20);
+		Other.SayIdle(
+				"See you when you're dead, asshole..."
+			);
+		Met.Anger(40);
+		Met.SayIdle(
+				"Remember when people used to be nice?"
+			);
+	
+		Other.SayIdle(
+				"Nope."
+			);
+		}
+	
+	instancescript FirstMeetLonerAggressiveNeutral4
+	{
+		Met.SayIdle(
+				"H-ey! Hey you!"
+			);
+		Other.SayIdle(
+				"Listen up. If you talk to me, you fight next to me. We teaming up?"
+			);
+		Met.SayIdle(
+				"Uh-uh. Not today. I'm fine on my own."
+			);
+		Other.SayIdle(
+				"Ha! Yeah, you look it. "
+			);
+		Other.SayIdle(
+				"I'll treat you nice and gentle when it's your turn to get put down."
+			);
+		Met.SayIdle(
+				"Too kind."
+			);
+	}
+
+	instancescript FirstMeetLonerAggressiveNeutral5
+	{
+		Other.SayIdle(
+				"You're teaming up with me buddy."
+			);
+		Met.SayIdle(
+				"Not with that attitude."
+			);
+		Other.Anger(20);
+		Other.SayIdle(
+				"Alright asshole. Die alone."
+			);
+		Met.Anger(20);
+		Met.SayIdle(
+				"Know what? I'd rather do that."
+			);
+	}
+
+	instancescript FirstMeetLonerAggressiveNeutral6
+	{
+		Other.SayIdle(
+				"Hey, want to join forces?"
+			);
+		Met.SayIdle(
+				"Ha, you'd shoot me in the back and steal all my stuff the second I turned my back."
+			);
+		Other.Anger(20);
+		Other.SayIdle(
+				"You get that just from looking at me?"
+			);
+		
+		Met.SayIdle(
+				"I've met enough people like you these past few days."
+			);
+	
+		Met.SayIdle(
+				"Just back off. Leave me alone."
+			);
+	}
+	
+	instancescript FirstMeetLonerAggressiveNeutral7
+	{
+		Other.SayIdle(
+				"Wanna go break in some dead-heads?"
+			);
+		Met.Anger(20);
+		Met.SayIdle(
+				"That's my family you could be talking about asshole."
+			);
+		Other.SayIdle(
+				"Your family's fucking dead buddy."
+			);
+		Met.Anger(50);
+		Other.SayIdle(
+				"Suck it up."
+			);
+		
+		Met.SayIdle(
+				"Just leave me alone."
+			);
+	
+	}
+	
+	instancescript FirstMeetLonerAggressiveNeutral8
+	{
+		Other.SayIdle(
+				"You look like you can handle these infected assholes, right?"
+			);
+		Met.SayIdle(
+				"Sure I can. I've 'handled' my wife, my neighbors... the guy in the 7-Eleven."
+			);
+		Other.SayIdle(
+				"Want to join me? There's safety in numbers."
+			);
+	
+		Met.SayIdle(
+				"Not today. I've done enough today."
+			);
+	
+	}
+	
+	instancescript FirstMeetLonerAggressiveNeutral9
+	{
+		Met.SayIdle(
+				"Let me guess. You're going to ask me for help?"
+			);
+		Other.SayIdle(
+				"Help? I'm just fine on my own."
+			);
+	
+		Met.SayIdle(
+				"What I do need is a walking, talking distraction from my own sorry ass."
+			);
+		Other.SayIdle(
+				"Not me. Not today. No way."
+			);
+		Met.SayIdle(
+				"Your funeral asshole."
+			);
+		Other.Anger(20);
+	
+	}
+	
+
+	instancescript FirstMeetLonerAggressiveNeutral10
+	{
+		Other.SayIdle(
+				"Hey you! Breathing guy! You're with me!  "
+			);
+	
+		Met.SayIdle(
+				"Last guy I teamed up with tried to take a chunk from my neck while I slept."
+			);
+		Met.SayIdle(
+				"No thanks."
+			);
+	
+		Other.SayIdle(
+				"Your loss fucker."
+			);
+		Met.Anger(20);
+		Other.SayIdle(
+				"Next time I see you, you'll be dead in the street."
+			);
+		Met.Anger(20);
+		
+	}
+	
+	
+}

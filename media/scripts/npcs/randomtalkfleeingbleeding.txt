@@ -1,0 +1,24 @@
+module Base
+{
+
+	scriptflag RandomTalkFleeingBleeding_1ManCount
+	{
+		1
+	}
+
+	instancescript RandomTalkFleeingBleeding_1Man1
+	{
+		A.SayIdle(
+				"Argh! Need. To. Find... Bandages...",
+				"I'm not gonna die, I'm not gonna die...",
+				"Must...must...Jesus!",
+				"Keep going.... keep going...",
+				"Jesus, this hurts...",
+				"The pain... fucking HELL!",
+				"Fuck this hurts!",
+				"I don't want to die!",
+				"Somebody help me!",
+				);
+	}
+
+}

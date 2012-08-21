@@ -1,0 +1,93 @@
+module Base
+{
+
+	instancescript FirstMeetAlreadyGroupMembers
+	{
+		if(Other.IsInGroup())
+		{
+			callwait FirstMeetOtherInAGroup;
+		}
+		else
+		{
+			if(Other.IsInGroup())
+			{
+				callwait FirstMeetMetInAGroup;
+			}
+		}
+	}
+	
+	randomselector FirstMeetOtherInAGroup
+	{
+		FirstMeetOtherInAGroupA
+	}
+	
+	instancescript FirstMeetOtherInAGroupA
+	{
+		if(Other.IsAggressive())
+		{
+			Other.SayIdle(
+				"Fuck me, how's that guy still breathing?",
+				"Fuck, it's him again.",
+				"That prick's back again.",
+				"You! Fuck off will you?",
+				"How many times do you need to be told to fuck off?"
+				);
+			if(Met.IsAggressive())
+			{
+				Met.SayIdle(
+					"Yeah, yeah. Fuck you too.",
+					"Oh fuck off.",
+					"Prick.",
+					"Who the fuck do you think you are?"
+					);
+			}
+			else
+			{
+				Met.SayIdle(
+					"Charming.",
+					"Jesus, excuse me for breathing.",
+					"You'd think the end of the world would bring us closer.",
+					"Geez, fine, whatever."
+					);
+			}
+		}
+		else
+		{
+			Other.SayIdle(
+				"Hello again!",
+				"Hey there, buddy!",
+				"Still alive, I see! Hang in there.",
+				"Nice to see you're still okay!",
+				);
+				
+			if(Met.IsAggressive())
+			{
+				Met.SayIdle(
+					"Fuck you.",
+					"Fuck off.",
+					"Oh shut up.",
+					"Fucking leave me alone, alright?",
+					);
+			}
+			else
+			{
+				Met.SayIdle(
+					"Hi again!",
+					"Nice to see a friendly face!",
+					"Things have gone crazy, haven't they?",
+					);
+			}
+		}
+	}
+	
+	randomselector FirstMeetMetInAGroup
+	{
+		FirstMeetMetInAGroupA
+	}
+	
+	instancescript FirstMeetMetInAGroupA
+	{
+		/*Met.SayIdle("Blah blah I'm in a group.");*/
+	}
+	
+}

@@ -1,0 +1,84 @@
+module Base
+{
+
+	randomselector FirstMeetLonerAggressiveAggressive
+	{
+		FirstMeetLonerNeutralAggressiveA,
+	}
+	randomselector FirstMeetLonerNeutralNeutral
+	{
+		FirstMeetLonerNeutralNeutralA,
+	}
+	
+	/*
+		The person you've met is a loner, and wants to be alone...
+	*/
+	instancescript FirstMeetLonerNeutralNeutralA
+	{
+		Other.SayIdle(
+				"Back off! Don't need some prick getting me killed.",
+				"Stay away from me, you hear?",
+			);
+	}
+	
+	
+	instancescript FirstMeetLonerAggressiveAggressive
+	{
+		Other.SayIdle(
+				"Back off! Don't need some prick getting me killed."
+			);
+		Met.SayIdle(
+				"Okay. It's cool!"
+			);
+		Met.SayIdle(
+				"I'm walkin' on... I'm walkin' on..."
+			);
+	}
+	
+	instancescript FirstMeetLoner
+	{
+		if(!Met.IsAggressive() && Other.IsFriendly())
+		{
+			callwait FirstMeetLonerNeutralFriendly;
+			StopScript();
+		}
+		if(!Other.IsAggressive() && Met.IsAggressive())
+		{
+			callwait FirstMeetLonerNeutralAggressive;
+			StopScript();
+		}
+		if(Other.IsAggressive() && !Met.IsAggressive())
+		{
+			callwait FirstMeetLonerAggressiveNeutral;
+			StopScript();
+		}		
+		if(Other.IsAggressive() && Met.IsAggressive())
+		{
+			callwait FirstMeetLonerAggressiveAggressive;
+			StopScript();
+		}
+		if(!Met.IsAggressive() && !Other.IsAggressive())
+		{
+			callwait FirstMeetLonerNeutralFriendly;
+			StopScript();
+		
+		}
+		/*
+			TEMP
+		*/
+		if(Other.IsAggressive())
+		{
+			callwait FirstMeetLonerAggressiveAggressive;
+			StopScript();
+		}
+		else
+		{
+			callwait FirstMeetLonerNeutralAggressive;
+			StopScript();
+		
+		}
+	
+	
+	}
+
+}

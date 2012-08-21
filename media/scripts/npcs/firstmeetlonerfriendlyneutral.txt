@@ -1,0 +1,157 @@
+module Base
+{
+
+	randomselector FirstMeetLonerNeutralFriendly
+	{
+		FirstMeetLonerFriendlyNeutral1,
+		FirstMeetLonerFriendlyNeutral2,
+		FirstMeetLonerFriendlyNeutral3,
+		FirstMeetLonerFriendlyNeutral5,
+		FirstMeetLonerFriendlyNeutral6,
+		FirstMeetLonerFriendlyNeutral7,
+		FirstMeetLonerFriendlyNeutral8,
+		
+	}
+
+	instancescript FirstMeetLonerFriendlyNeutral1
+	{
+		Other.SayIdle(
+				"Hey!"
+			);
+		Met.SayIdle(
+				"Not interested buddy."
+			);
+		Met.SayIdle(
+				"Walk away."
+			);
+	}
+	instancescript FirstMeetLonerFriendlyNeutral2
+	{
+	
+		Met.SayIdle(
+				"I'm fine on my own, friend."
+			);
+		Met.SayIdle(
+				"Don't even ask."
+			);
+		Other.SayIdle(
+				"Okay. Okay."
+			);
+		}
+	instancescript FirstMeetLonerFriendlyNeutral3
+	{
+	
+		Other.SayIdle(
+				"You look friendlier than the rest."
+			);
+		Met.SayIdle(
+				"That might be true."
+			);
+		Met.SayIdle(
+				"Don't need a friend though. Not today."
+			);
+		Other.SayIdle(
+				"I'll leave you be."
+			);
+	
+		}
+	instancescript FirstMeetLonerFriendlyNeutral5
+	{
+	
+		Other.SayIdle(
+				"Hey, you need some help?"
+			);
+		Met.SayIdle(
+				"I just want to be left alone."
+			);
+
+		Other.SayIdle(
+				"Well good luck anyway."
+			);
+		Met.SayIdle(
+				"You too."
+			);
+		Met.SayIdle(
+				"Hell, we need it."
+			);
+	
+		}
+	instancescript FirstMeetLonerFriendlyNeutral6
+	{
+	
+		Other.SayIdle(
+				"Want me to watch your back?"
+			);
+		Met.SayIdle(
+				"More people means more noise."
+			);
+	
+		Met.SayIdle(
+				"More noise? That don't end well."
+			);
+
+		Other.SayIdle(
+				"Yeah, yeah I know."
+			);
+		Met.SayIdle(
+				"Happy trails though."
+			);
+		Met.SayIdle(
+				"I wish you luck."
+			);
+	
+		}
+	instancescript FirstMeetLonerFriendlyNeutral7
+	{
+	
+		Other.SayIdle(
+				"Hey."
+			);
+		Met.SayIdle(
+				"Hey."
+			);
+	
+		Other.SayIdle(
+				"You, er... you want to team up? Get through this together?"
+			);
+
+		Met.SayIdle(
+				"I've lost all my friends."
+			);
+		Met.SayIdle(
+				"I'm not going to lose another."
+			);
+		Other.SayIdle(
+				"Look though, we can help each other."
+			);
+		Met.SayIdle(
+				"There's no helping any more. "
+			);
+		Met.SayIdle(
+				"None at all."
+			);
+
+		}
+	
+	instancescript FirstMeetLonerFriendlyNeutral8
+	{
+	
+		Other.SayIdle(
+				"Need some help?"
+			);
+		Met.SayIdle(
+				"None that you can give."
+			);
+	
+		Other.SayIdle(
+				"Okay. Be like that."
+			);
+		Other.SayIdle(
+				"Some people..."
+			);
+
+		}
+	
+	
+	
+}

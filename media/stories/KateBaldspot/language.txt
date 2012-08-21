@@ -1,0 +1,122 @@
+module KateBaldspotLanguage
+{
+	language SmotherLanguage
+	{
+		"What are you doing? Oh God no.",
+		"I'm sorry I slowed you down.",
+		"I love you.",
+		"****mmmffff*****"
+	}
+
+	language TakePillsLanguage
+	{
+		"Here, take one of these..."
+	}
+	
+	language BarricadeQuestLanguage
+	{
+		"Secure the Safehouse",
+		"Go to the shed",
+		"Find a hammer",
+		"Find some wood",
+		"Find some nails",
+		"Equip hammer",
+		"Barricade the safehouse doors and windows",
+		"Return to Kate",
+	}
+	
+	language TendWifeQuestLanguage
+	{
+		"Tend to Kate's Broken Leg",
+		"Find something to make bandanges",
+		"Craft some bandages",
+		 "Bandage Kate's leg",
+		 "Check the adjoining bathroom for painkillers",
+		 "Give Kate a pill",
+	}
+	
+	language BobBarricadeLanguage
+	{
+		"I'm sorry I fucked up hon.",
+		"I screwed everything.",
+		"Screwed us...",
+		"You are fine. We are fine.",
+		"We're just going to have to hole up here for a while.",
+		"I can see a shed in the yard - might be some tools, some wood...",
+		"This place'll be a fortress.",
+		"Third fortress this week.",
+		"Don't be long.",
+		"Please don't be long."
+		
+	}
+	
+	language OpeningConversationLanguage
+	{
+		"I'm sorry. I'm sorry.",
+		"It's fine. We can deal with this. Just...",
+		"Christ it hurts. Fuck. I'm sorry.",
+		"Right. This is bad, I know this is bad - but we're still here.",
+		"You're still breathing.",
+		"All our stuff, they just took it...",
+		"Okay, just hold fire for a second...let me stop this bleeding.",
+		"There'll be sheets in here we can rip to dress the wounds.",
+		"Maybe some painkillers.",
+	}
+	
+	language HelpIconLanguage
+	{
+		"Movement",
+		"To move, use the WASD keys. Holding SHIFT will allow you to to run.",
+		"Inventory",
+		"This icon is your inventory, click while holding an item to put them into it.<br><br>Click without an item to open up your inventory, and you can then transfer items freely to/from containers.<br><br>You can also access the crafting panel from your inventory.",
+		"Medical",
+		"This icon is your Medical panel. Here you will be able to check on your health and any injuries you've sustained, as well as bandage limbs and administer other medical treatment.",
+		"Clothing",
+		"This is the clothing panel where you can put on or take off clothing you find.",	
+	}
+	
+	language SleepBeforeSuppliesLanguage
+	{
+		"Okay, we're safe.",
+		"My hero!",
+		"Glad to see the sense of humor is back.",
+		"Hero's fine! Without you I'd be cold, dead and roaming the streets.",
+		"And limping.",
+		"That too...",
+		"I need to go find supplies.",
+		"It's pitch black out there, hon.",
+		"It's going to be dark soon, hon.",
+		"You won't see the neighbors till they've taken chunks from you.",
+		"We'll sleep hungry.",
+	
+	}
+	
+	language MakeSoupQuestLanguage
+	{
+		"Soup Kitchen",
+		 "Get a cooking pot",
+		 "Find a tin opener and craft a pot of soup",
+		 "Put soup in oven and turn oven on",
+	}
+	
+	language FastFoodQuestLanguage
+	{
+		"Fast Food",
+		"Leave the house",
+		"Carefully approach house to the east",
+		"Kill the zombie",
+		"Search the kitchen and collect some food supplies",
+		"Return to safehouse kitchen",
+		
+	}
+	
+	language WokeUpInTutorialBedLanguage
+	{
+		"I miss the days when we didn't take a hammer to bed.",
+		"Time to go out. See what I can see.",
+		"If you see one of them, just run. No man stuff.",
+		"Just bring back food! ",
+		"We're not running anymore sweetheart.",
+		
+	}
+}

@@ -1,0 +1,321 @@
+module Base
+{
+	randomselector FollowMe
+	{
+		FollowMe1,
+	}
+	
+	randomselector StayHere
+	{
+		StayHere1,
+	}
+	
+	randomselector GuardB
+	{
+		GuardB1,
+	}
+	instancescript GuardB1
+	{
+		Follower.SayIdle("I'm on it.");
+	}
+	randomselector GuardA
+	{
+		GuardA1,
+	}
+	instancescript GuardA1
+	{
+		Leader.SayIdle("I need you to guard this place.");		
+		Follower.SayIdle("Sure.");
+		Follower.SayIdle("Tell me where you want me.");
+	}
+		
+	instancescript StayHere1
+	{
+		Leader.SayIdle("Stay here...");		
+		Follower.Order(Idle);
+		Follower.SayIdle("Sure.",
+						"I'll be right here.",
+						"Don't be long.");
+	}
+	
+	instancescript FollowMe1
+	{
+		Leader.SayIdle("Follow me.");		
+		Follower.Order(Follow, Leader, 2);
+		Follower.SayIdle("Sure.",
+						"Right behind you.",
+						"You lead the way.");
+	}
+	
+	
+	randomselector BackWithLoot
+	{
+		BackWithLoot1,
+		BackWithLoot2,
+		BackWithLoot3,
+		BackWithLoot4,
+		BackWithLoot5
+		
+	}
+	instancescript BackWithLoot1
+	{
+		Leader.SayIdle("That was way too close...");
+		
+		if(Returning1.Exists())
+		{
+			Returning1.Say("We are NOT doing that again.");
+		}
+	}
+	instancescript BackWithLoot2
+	{
+		
+		if(Returning1.Exists())
+		{
+			Returning1.SayIdle("I can't believe we're all still... here.");
+			
+		}
+		
+		if(Returning2.Exists())
+		{
+			Returning2.Say("Gah, I can still smell them on me. ");
+			
+		}
+		
+		Leader.Say("Nice work guys.");
+	}
+
+	instancescript BackWithLoot3
+	{
+
+		Leader.Say("See? I told you it'd work out fine.");
+
+		if(Returning1.Exists())
+		{
+			Returning1.SayIdle("Fine? Was that fine?");
+		}
+		
+		if(Returning2.Exists())
+		{
+			Returning2.Say("When I can breathe again, I'm gonna punch you in the face.");
+		}
+		
+	}
+	
+	instancescript BackWithLoot4
+	{
+
+		Leader.Say("Well, we made it.");
+
+		if(Returning1.Exists())
+		{
+			Returning1.SayIdle("Almost.");
+		}
+		
+		if(Returning2.Exists())
+		{
+			Returning2.Say("I used to be such an outdoors kindof guy...");
+		}
+		
+	}
+	
+	instancescript BackWithLoot5
+	{
+
+		if(Returning1.Exists())
+		{
+			Returning1.SayIdle("Sooner or later this town's gonna totally run out of supplies.");
+			Leader.Say("Until then we keep on raiding.");
+		}
+		
+		if(Returning2.Exists())
+		{
+			Returning2.Say("We'll be dead before we run out. We're screwed.");
+			Leader.SayAt(Returning2, "Little victories $SURNAME1$, little victories.");
+		}
+		
+	}
+	
+
+	randomselector ArrangeLooting
+	{
+		ArrangeLooting1,
+		ArrangeLooting2,
+		ArrangeLooting3,
+		ArrangeLooting4,		
+	}
+	
+	instancescript ArrangeLooting1
+	{
+		Leader.Say("We're running low on supplies.");
+		Leader.Say("We need food and new ways to break heads.");
+
+		if(Companion1.Exists() && Companion2.Exists() && Companion3.Exists())
+		{
+			Leader.SayAt(Companion1, Companion2, Companion3, "$SURNAME1$, $SURNAME2$ and $SURNAME3$ - you're with me.");
+		}
+		else
+		{
+			if(Companion1.Exists() && Companion2.Exists())
+			{
+				Leader.SayAt(Companion1, Companion2, "$SURNAME1$, $SURNAME2$ - you're with me.");
+			}
+			else
+			{
+				if(Companion1.Exists())
+				{
+					Leader.SayAt(Companion1, "$SURNAME1$ - you're with me.");
+
+				}
+			}
+		
+		}
+
+		if(Guard1.Exists() && Guard2.Exists() && !Guard3.Exists())
+		{
+			Leader.SayAt(Guard1, Guard2, "$SURNAME1$, $SURNAME2$, stay here. Make sure this place is locked up tight.");
+		}
+		else
+		{
+			if(Guard1.Exists() && !Guard3.Exists())
+			{
+				Leader.SayAt(Guard1, "$SURNAME1$, stay here. Make sure this place is locked up tight.");
+			}	
+		}
+
+		
+		
+		
+	}
+
+	instancescript ArrangeLooting2
+	{
+		Leader.Say("We've got enough people to cut our way through those assholes,");
+		Leader.Say("and find some gear.");
+
+		if(Companion1.Exists() && Companion2.Exists() && Companion3.Exists())
+		{
+			Leader.SayAt(Companion1, Companion2, Companion3, "$SURNAME1$, $SURNAME2$ and $SURNAME3$ - let's stick our heads outside.");
+		}
+		else
+		{
+			if(Companion1.Exists() && Companion2.Exists())
+			{
+				Leader.SayAt(Companion1, Companion2, "$SURNAME1$, $SURNAME2$ - let's stick our heads outside.");
+			}
+			else
+			{
+				if(Companion1.Exists())
+				{
+					Leader.SayAt(Companion1, "$SURNAME1$ - let's stick our heads outside.");
+
+				}
+			}
+		
+		}
+
+		if(Guard1.Exists() && Guard2.Exists() && !Guard3.Exists())
+		{
+			Leader.SayAt(Guard1, Guard2, "$SURNAME1$, $SURNAME2$, keep the deadheads out till we get back, y'hear?");
+		}
+		else
+		{
+			if(Guard1.Exists() && !Guard3.Exists())
+			{
+				Leader.SayAt(Guard1, "$SURNAME1$, keep the deadheads out till we get back, y'hear?");
+			}	
+		}
+
+		
+		
+		
+	}
+
+	instancescript ArrangeLooting3
+	{
+		Leader.Say("It's quiet enough outside to risk a raid.");
+
+	
+		if(Guard1.Exists() && Guard2.Exists() && !Guard3.Exists())
+		{
+			Leader.SayAt(Guard1, Guard2, "$SURNAME1$, $SURNAME2$, stay here.");
+			Leader.Say("Kill anything that comes through the door that don't have a pulse.");
+		}
+		else
+		{
+			if(Guard1.Exists() && !Guard3.Exists())
+			{
+				Leader.SayAt(Guard1, "$SURNAME1$, stay here.");
+				Leader.Say("Kill anything that comes through the door that don't have a pulse.");
+			}	
+		}
+
+		if(Companion1.Exists() && Companion2.Exists() && Companion3.Exists())
+		{
+			Leader.SayAt(Companion1, Companion2, Companion3, "$SURNAME1$, $SURNAME2$ and $SURNAME3$ - your time to shine.");
+		}
+		else
+		{
+			if(Companion1.Exists() && Companion2.Exists())
+			{
+				Leader.SayAt(Companion1, Companion2, "$SURNAME1$, $SURNAME2$ - your time to shine.");
+			}
+			else
+			{
+				if(Companion1.Exists())
+				{
+					Leader.SayAt(Companion1, "$SURNAME1$ - your time to shine.");
+
+				}
+			}
+		
+		}
+		
+		
+		
+	}
+
+	instancescript ArrangeLooting4
+	{
+		Leader.Say("You don't want to hear this, but we're running low on...");
+		Leader.Say("... everything.");
+
+		if(Guard1.Exists() && Guard2.Exists() && !Guard3.Exists())
+		{
+			Leader.SayAt(Guard1, Guard2, "$SURNAME1$, $SURNAME2$, you've done enough today.");
+			Leader.Say("Stick here and guard the place.");
+		}
+		else
+		{
+			if(Guard1.Exists() && !Guard3.Exists())
+			{
+				Leader.SayAt(Guard1, "$SURNAME1$, you've done enough today.");
+				Leader.Say("Stick here and guard the place.");
+			}	
+		}
+
+		if(Companion1.Exists() && Companion2.Exists() && Companion3.Exists())
+		{
+			Leader.SayAt(Companion1, Companion2, Companion3, "Me, $SURNAME1$, $SURNAME2$ and $SURNAME3$ are heading out to hunt...");
+		}
+		else
+		{
+			if(Companion1.Exists() && Companion2.Exists())
+			{
+				Leader.SayAt(Companion1, Companion2, "Me, $SURNAME1$ and $SURNAME2$ are heading out to hunt...");
+			}
+			else
+			{
+				if(Companion1.Exists())
+				{
+					Leader.SayAt(Companion1, "Me and $SURNAME1$ are heading out to hunt...");
+
+				}
+			}
+		
+		}
+		
+		
+		
+	}
+
+}

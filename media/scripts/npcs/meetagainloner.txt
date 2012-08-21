@@ -1,0 +1,68 @@
+module Base
+{
+
+	randomselector MeetAgainLoner
+	{
+		MeetAgainLonerA,
+	}
+	
+	/*
+		The person you've met is a loner, and wants to be alone...
+	*/
+	
+	instancescript MeetAgainLonerA
+	{
+		if(Other.IsAggressive())
+		{
+			Other.SayIdle(
+				"Back off! Don't need some prick getting me killed.",
+				"Stay away from me, you hear?",
+			);
+			
+			if(!Met.IsAggressive())
+			{	
+				Met.SayIdle(
+					"Yeah, whatever.",
+					"Dick.",
+					"Fine. Sorry.",
+					);
+			}
+			else
+			{
+				Met.AddEnemy(Other);
+				Met.SayIdle(
+					"Who the hell do you think you're talking to?",
+					"Fuck you, asshole.",
+					"Screw you.",
+					"Well, who do we have here?"
+					);
+				Met.SayIdle(
+					"I'll go where I damn please!",
+					"How about *you* fuck off before I mistake you for a zed?",
+					"I'd start running if I were you..."
+					);
+			}
+		}
+		else
+		{
+			if(Other.IsFriendly())
+			{
+				Other.SayIdle(
+					"Hey bud, don't mind me. Just comin' through!",
+					"Great day for killing zeds, huh?",
+				);
+			}
+			else
+			{
+				Other.SayIdle(
+					"I don't want no trouble, just keep yer distance!",
+					"Stay away from me, man!",
+					"Hey, step away, mister.",
+					"Not looking for trouble!"
+				);
+			}
+		}	
+	
+	}
+
+}

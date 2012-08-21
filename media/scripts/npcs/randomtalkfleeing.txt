@@ -1,0 +1,28 @@
+module Base
+{
+	scriptflag RandomTalkFleeing_1ManCount
+	{
+		1
+	}
+
+	instancescript RandomTalkFleeing_1Man1
+	{
+		if(!A.TestStat("Bravery"))
+		{
+			A.SayIdle(
+					"Oh GOD oh GOD!",
+					"We're all going to die!",
+					"We gotta get out of here!",
+					"They're all around us!!!",
+					"RUN! They're everywhere!",
+					"Fuck fuck fuck fuck fuck...",
+					"Oh Jesus!",
+					"I don't want to die!",
+					"Fucking DEAD people eating everyone!",
+					"What the FUCK is going on?",
+					"Where's the fucking army?",
+					"They're EATING people! What the FUCK?"
+					);
+		}
+	}
+}

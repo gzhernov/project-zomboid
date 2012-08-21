@@ -1,0 +1,241 @@
+module Base
+{
+	scriptflag KilledZombie_1ManCount
+	{
+		1
+	}
+	scriptflag KilledSurvivor_1ManCount
+	{
+		1
+	}
+	scriptflag KilledZombie_2ManCount
+	{
+		1
+	}
+	scriptflag KilledSurvivor_2ManCount
+	{
+		1
+	}
+	scriptflag KilledZombie_3ManCount
+	{
+		1
+	}
+	scriptflag KilledSurvivor_3ManCount
+	{
+		1
+	}
+	
+	instancescript KilledZombie_1Man1
+	{
+		if(!Killer.IsAggressive())
+		{
+			Killer.SayIdle( 
+						"I'm sorry. I'm so sorry.",
+						"Sorry about this...",
+						"Jesus. That looked nasty...",
+						"Jeez. That was grim.",
+						"One down, I guess.",
+						"I hope you weren't who I thought you were...",
+						"That one would've hurt a while ago, huh? ",
+						"Rest in peace.",
+						"That's some way to check out...",
+						"And I thought they smelled bad on the outside...",
+						"Urgh...",
+						"Not pleasant."
+						);
+		}
+		else
+		{
+				Killer.SayIdle( 
+						"Take it!",
+						"Have it!",
+						"That one almost felt good. Jeez...",
+						"Die you asshole!",
+						"Just fucking die!",
+						"And... you're outta there!",
+						"You've got a bit of red on you there...",
+						"God. This is FUCKED UP.",
+						"This isn't happening. This ISN'T FUCKING HAPPENING.",
+						"Never liked that guy anyway.",
+						"And... FUCK YOU!",
+						"Don't get back up you dead motherfuckin' ASSHOLE!"
+
+						);
+		}
+	
+	}
+
+	instancescript KilledSurvivor_1Man1
+	{
+	/*
+		if(Killer.IsAggressive())
+		{
+			Killer.SayIdle(
+							"Oops.",
+							"Fucking useless prick.",
+							"Fucker getting in my way.",
+						
+							);
+		}
+		else
+		{
+			Killer.SayIdle(
+							"Fuck! Sorry. Oh man.",
+							"Oh Jesus! I'm so sorry!",
+							"Oh man, what have I done?",
+							"Oh shit, no!"
+							);
+		}*/
+	}
+	
+	instancescript KilledZombie_2Man1
+	{
+		if(!Killer.IsAggressive())
+		{
+			Killer.SayIdle( 
+						"I'm sorry. I'm so sorry.",
+						"Sorry about this...",
+						"Jesus. That looked nasty...",
+						"Jeez. That was grim.",
+						"One down, I guess.",
+						"I hope you weren't who I thought you were...",
+						"That one would've hurt a while ago, huh? ",
+						"Rest in peace.",
+						"That's some way to check out...",
+						"And I thought they smelled bad on the outside...",
+						"Urgh...",
+						"Not pleasant."
+						);
+		}
+		else
+		{
+				Killer.SayIdle( 
+						"Take it!",
+						"Have it!",
+						"That one almost felt good. Jeez...",
+						"Die you asshole!",
+						"Just fucking die!",
+						"And... you're outta there!",
+						"You've got a bit of red on you there...",
+						"God. This is FUCKED UP.",
+						"This isn't happening. This ISN'T FUCKING HAPPENING.",
+						"Never liked that guy anyway.",
+						"And... FUCK YOU!",
+						"Don't get back up you dead motherfuckin' ASSHOLE!"
+
+						);
+		}
+	
+		if(A.IsAggressive())
+		{	
+			A.SayIdle(
+						"Yeah, that's right!",
+						"You sure nailed that one!",
+						"You're good at this shit! ",
+						"Nice.",
+						"Fuck...",
+						"That feel as good as it looked?",
+						"Another one down.",
+						"He's down!",
+						"This isn't a competition pal...",
+						"Just another day the office, huh?"
+						);
+		}
+		else
+		{
+			A.SayIdle(
+						"Nice moves. Come on...",
+						"Love your work.",
+						"Another one down.",
+						"Like it.",
+						"Jesus, be careful!",
+						"God. I think I knew that guy.",
+						"That one was nasty.",
+						"That. That was disgusting.",
+						"Reckon we're gonna wake up any time soon?"
+						);
+		}
+	}
+
+	instancescript KilledSurvivor_2Man1
+	{
+		if(Killer.IsAggressive())
+		{
+			Killer.SayIdle(
+							"Oops.",
+							"You saw that, yeah? He attacked me.",
+							"Fucking useless prick.",
+							"The guy looked like trouble."
+							);
+		}
+		else
+		{
+			Killer.SayIdle(
+							"Fuck! Sorry. Oh man.",
+							"Oh Jesus! I'm so sorry!",
+							"Oh man, what have I done?",
+							"Oh shit, no!"
+							);
+		}
+		if(A.IsAggressive())
+		{			
+			A.SayIdle(
+							"He deserved it.",
+							"Guy had it coming.",
+							"It's them or us.",
+							"Hey, we gotta look out for ourselves.",
+							);
+		}
+		else
+		{
+			A.SayIdle(
+							"You probably did him a favor.",
+							"You put him out of his misery, that's all.",
+							"Oh God!"
+							);
+		}
+	}
+	instancescript KilledZombie_3Man1
+	{
+	
+	}
+
+	instancescript KilledSurvivor_3Man1
+	{
+		if(Killer.IsAggressive())
+		{
+			Killer.SayIdle(
+							"Oops.",
+							"You saw that, yeah? He attacked me.",
+							"Fucking useless prick.",
+							"The guy looked like trouble."
+							);
+		}
+		else
+		{
+			Killer.SayIdle(
+							"Fuck! Sorry. Oh man.",
+							"Oh Jesus! I'm so sorry!",
+							"Oh man, what have I done?",
+							"Oh shit, no!"
+							);
+		}
+		if(A.IsAggressive())
+		{			
+			A.SayIdle(
+							"He deserved it.",
+							"Guy had it coming.",
+							"It's them or us.",
+							"Hey, we gotta look out for ourselves.",
+							);
+		}
+		else
+		{
+			A.SayIdle(
+							"You probably did him a favor.",
+							"You put him out of his misery, that's all.",
+							"Oh God!"
+							);
+		}
+	}
+}

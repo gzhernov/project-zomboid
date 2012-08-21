@@ -1,0 +1,273 @@
+module Base
+{
+
+	randomselector FirstMeetLonerNeutralAggressive
+	{
+		FirstMeetLonerNeutralAggressive1,
+		FirstMeetLonerNeutralAggressive2,
+		FirstMeetLonerNeutralAggressive3,
+		FirstMeetLonerNeutralAggressive4,
+		FirstMeetLonerNeutralAggressive5,
+		FirstMeetLonerNeutralAggressive6,
+		FirstMeetLonerNeutralAggressive7,
+		FirstMeetLonerNeutralAggressive8,
+		FirstMeetLonerNeutralAggressive9,
+		FirstMeetLonerNeutralAggressive10,
+		FirstMeetLonerNeutralAggressive11,
+		FirstMeetLonerNeutralAggressive12,
+		FirstMeetLonerNeutralAggressive13,
+		FirstMeetLonerNeutralAggressive14,
+		FirstMeetLonerNeutralAggressive15
+	}
+	
+	instancescript FirstMeetLonerNeutralAggressive1
+	{
+		Met.SayIdle(
+				"Back off! Don't need some prick getting me killed."
+			);
+		Other.Anger(15);
+		Other.SayIdle(
+				"Okay. It's cool!"
+			);
+		Other.SayIdle(
+				"I'm walkin' on... I'm walkin' on..."
+			);
+	}
+		
+	instancescript FirstMeetLonerNeutralAggressive2
+	{
+		Met.SayIdle(
+				"Not one step closer pal! Not one!"
+			);
+		Other.SayIdle(
+				"I'm not looking for trouble."
+			);
+		Met.SayIdle(
+				"And still you found it. Back off!"
+			);
+		Other.Anger(20);
+				
+	}
+	
+	instancescript FirstMeetLonerNeutralAggressive3
+	{
+		Met.SayIdle(
+				"Get out of my face!"
+			);
+		Other.Anger(20);
+		Other.SayIdle(
+				"I just want to..."
+			);
+		Met.SayIdle(
+				"...to be another body lyin' face down in the street?"
+			);
+		Other.Anger(20);
+		Met.SayIdle(
+				"Get out of my fuckin' face!"
+			);
+	}
+	instancescript FirstMeetLonerNeutralAggressive4
+	{
+		Met.SayIdle(
+				"What the god damn hell are you starin' at?"
+			);
+		Other.SayIdle(
+				"Nothing, I..."
+			);
+		Met.SayIdle(
+				"Beat it buddy. Before I do somethin' we both regret."
+			);
+	}
+	
+	instancescript FirstMeetLonerNeutralAggressive5
+	{
+		Met.SayIdle(
+				"Back off! Back the hell off!"
+			);
+		Other.SayIdle(
+				"Maybe we can..."
+			);
+		Met.SayIdle(
+				"I SAID TO BACK THE HELL OFF!"
+			);
+		Other.Anger(30);
+		Other.SayIdle(
+				"Okay! Jesus! I heard the first time!"
+			);
+	}
+	
+	instancescript FirstMeetLonerNeutralAggressive6
+	{
+		Met.SayIdle(
+				"You need to get the fuck away. Right now."
+			);
+		Other.Anger(20);
+		Other.SayIdle(
+				"That's nice. That's charming."
+			);
+		Met.SayIdle(
+				"I'm not a people person right now."
+			);
+		Met.SayIdle(
+				"Not now. Not ever."
+			);
+	}
+	
+	instancescript FirstMeetLonerNeutralAggressive7
+	{
+		Met.SayIdle(
+				"I'd have caved your face in before all this."
+			);
+		Met.SayIdle(
+				"Nothing stopping me today neither... Get lost."
+			);
+		Other.Anger(20);
+		Other.SayIdle(
+				"Just so long as we know where we stand, I guess..."
+			);
+	}
+	
+	instancescript FirstMeetLonerNeutralAggressive8
+	{
+		Met.SayIdle(
+				"Outta my way!"
+			);
+			Other.SayIdle(
+				"Why? Did you get bit?"
+			);
+		Met.SayIdle(
+				"I'm just an asshole buddy."
+			);
+		Met.SayIdle(
+				"Back off or I put a hole in that pretty face. "
+			);
+	}
+
+	instancescript FirstMeetLonerNeutralAggressive9
+	{
+		Met.SayIdle(
+				"Come any closer and you'll regret it pal."
+			);
+			Other.SayIdle(
+				"I don't want trouble."
+			);
+		Met.SayIdle(
+				"We've all got troubles buddy."
+			);
+		Met.SayIdle(
+				"Just now you're closer to gettin' some more..."
+			);
+		Other.Anger(15);
+	}
+	
+	instancescript FirstMeetLonerNeutralAggressive10
+	{
+		Met.SayIdle(
+				"Back the hell off!"
+			);
+		Met.SayIdle(
+				"I've killed my neighbors, I killed the clerk in the grocery store, I..."
+			);
+			Other.SayIdle(
+				"Okay. That's fine. I'm going to leave you alone."
+			);
+		Met.SayIdle(
+				"I killed a whole lot of goddamn people today."
+			);
+	
+	}
+	instancescript FirstMeetLonerNeutralAggressive11
+	{
+		Met.SayIdle(
+				"Get lost! Get out of my sight!"
+			);
+			Other.SayIdle(
+				"But...  "
+			);
+		Met.SayIdle(
+				"Why won't you just LEAVE ME ALONE?"
+			);
+		Met.SayIdle(
+				"LEAVE. ME. ALONE!"
+			);
+		Other.Anger(30);
+		Other.SayIdle(
+				"I'm leavin'. I'm leavin'..."
+			);
+	
+	}
+
+	instancescript FirstMeetLonerNeutralAggressive12
+	{
+		Met.SayIdle(
+			"I don't like people. People get bites."
+			);
+		Other.SayIdle(
+				"Not me. I'm clean. Totally clean."
+			);
+		Met.SayIdle(
+				"You will. Everyone does."
+			);
+		Met.SayIdle(
+				"Stay away from me."
+			);
+	
+	
+	}
+	
+	instancescript FirstMeetLonerNeutralAggressive13
+	{
+		Other.SayIdle(
+				"Hey!"
+			);
+		Met.SayIdle(
+			"Fuck off."
+			);
+		Other.SayIdle(
+				"Okay!"
+			);
+	
+	
+	
+	}
+	instancescript FirstMeetLonerNeutralAggressive14
+	{
+	
+		Met.SayIdle(
+			"You one of them?"
+			);
+		Other.SayIdle(
+				"No!"
+			);
+		Met.SayIdle(
+				"Don't matter either way I guess."
+			);
+		Met.SayIdle(
+				"Keep away from me, or I'll take you down. Got that?"
+			);
+		Other.SayIdle(
+				"That's friendly. Real friendly..."
+			);
+		
+	
+	
+	}
+		
+	instancescript FirstMeetLonerNeutralAggressive15
+	{
+	
+		Met.SayIdle(
+			"I'll make it simple: leave me alone. Or I kill you."
+			);
+		Met.SayIdle(
+			"You got that?"
+			);
+		Other.SayIdle(
+				"I got the basics, sure."
+			);
+		
+	
+	
+	}
+	
+}

@@ -1,0 +1,36 @@
+module Sandbox
+{
+	script LoadCharacterTextures
+	{
+		LoadTexturePage(zombieFrames);
+		LoadTexturePage(characters);
+		LoadTexturePage(characterpieces);
+	}
+	
+	script PostLoad
+	{
+		Tutorial.DisableTutorialZombieControl();
+	
+	}
+
+	script LoadMapTextures
+	{
+		LoadTexturePage(tiles1);
+		LoadTexturePage(tiles2);
+		LoadTexturePage(tiles3);
+		LoadTexturePage(tiles4);
+		LoadTexturePage(tiles5);
+		LoadTexturePage(tiles6);
+	}
+
+	trigger OnPreMapLoad
+	{
+		call LoadMapTextures,
+		call LoadCharacterTextures
+	}
+
+	trigger OnPostMapLoad
+	{
+		call PostLoad
+	}
+}

@@ -1,0 +1,184 @@
+module Base
+{
+
+	randomselector FirstMeetTeamupAggressiveAggressive
+	{
+		FirstMeetTeamupAggressiveAggressive1,
+		FirstMeetTeamupAggressiveAggressive2,
+		FirstMeetTeamupAggressiveAggressive3,
+		FirstMeetTeamupAggressiveAggressive4,
+		FirstMeetTeamupAggressiveAggressive5,
+		FirstMeetTeamupAggressiveAggressive6,
+		FirstMeetTeamupAggressiveAggressive7,
+		FirstMeetTeamupAggressiveAggressive8,
+		FirstMeetTeamupAggressiveAggressive9,
+		FirstMeetTeamupAggressiveAggressive10,
+
+	}
+
+	instancescript FirstMeetTeamupAggressiveAggressive1
+	{
+		Other.SayIdle(
+				"I need some help taking these dead guys down. You in?"
+			);
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Hell yeah."
+			);
+		Met.SayIdle(
+				"Let's bust some heads."
+			);
+			
+		Met.Order(Follow, Other, 2);
+	}
+
+	instancescript FirstMeetTeamupAggressiveAggressive2
+	{
+		Other.SayIdle(
+				"Hey! I'm clearin' this patch of town."
+			);
+		Met.SayIdle(
+				"Good call. Me too."
+			);
+	
+		Other.SayIdle(
+				"I'll watch your back."
+			);
+	Other.AddToGroup(Met);
+			Met.SayIdle(
+				"Much obliged."
+			);
+			
+		Met.Order(Follow, Other, 2);
+	}
+	instancescript FirstMeetTeamupAggressiveAggressive3
+	{
+		Other.SayIdle(
+				"Howdy Neighbor..."
+			);
+		Met.SayIdle(
+				"Howdy."
+			);
+	
+		Other.SayIdle(
+				"You out to get the dead, or the living?"
+			);
+		Met.SayIdle(
+				"The dead."
+			);
+		Other.AddToGroup(Met);
+		Other.SayIdle(
+				"Sounds good. You've got a new friend."
+			);
+		
+		Met.Order(Follow, Other, 2);
+	}
+	instancescript FirstMeetTeamupAggressiveAggressive4
+	{
+		Other.SayIdle(
+				"Hey, I'm loving your work."
+			);
+		Met.SayIdle(
+				"Want in? Beat on some dead guys?"
+			);
+		Other.AddToGroup(Met);
+	
+		Other.SayIdle(
+				"Sure."
+			);
+	
+		Met.Order(Follow, Other, 2);
+	}
+	instancescript FirstMeetTeamupAggressiveAggressive5
+	{
+		Other.SayIdle(
+				"Hey, I'm clearing the neighborhood. Want in?"
+			);
+		Met.SayIdle(
+				"Nothing I'd like more. "
+			);
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Let's take our town back."
+			);
+	
+		Met.Order(Follow, Other, 2);
+	}
+	instancescript FirstMeetTeamupAggressiveAggressive6
+	{
+		Met.SayIdle(
+				"You gunning for me, or them?"
+			);
+		Other.SayIdle(
+				"Them."
+			);
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Good to hear."
+			);
+	
+		Met.Order(Follow, Other, 2);
+	}
+	instancescript FirstMeetTeamupAggressiveAggressive7
+	{
+		Other.SayIdle(
+				"Hey you! You're on my side now!"
+			);
+		Met.SayIdle(
+				"It's our side, pal. You're not some kinda hero."
+			);
+		Other.AddToGroup(Met);
+		Other.SayIdle(
+				"Whatever."
+			);
+	
+		Met.Order(Follow, Other, 2);
+	}
+	instancescript FirstMeetTeamupAggressiveAggressive8
+	{
+		Other.SayIdle(
+				"You're teaming up with me buddy."
+			);
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Until I shoot you in the back? Yeah. Why not?"
+			);
+		Other.SayIdle(
+				"You sound a real nice guy. You know that?"
+			);
+	
+		Met.Order(Follow, Other, 2);
+	}
+
+	instancescript FirstMeetTeamupAggressiveAggressive9
+	{
+		Other.SayIdle(
+				"You're alive too, huh?"
+			);
+		Met.SayIdle(
+				"Yeah. I'm keeping it that way."
+			);
+		Other.AddToGroup(Met);
+		Other.SayIdle(
+				"Me too. Let's work together."
+			);
+	
+		Met.Order(Follow, Other, 2);
+	}
+	instancescript FirstMeetTeamupAggressiveAggressive10
+	{
+		Other.SayIdle(
+				"Killin' these fucks is easy."
+			);
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Easier with two."
+			);
+		Other.SayIdle(
+				"Way easier..."
+			);
+	
+		Met.Order(Follow, Other, 2);
+	}
+	
+}

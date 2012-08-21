@@ -1,0 +1,259 @@
+/*
+**	This is called directly after the story is loaded, before the map and everything.
+**	Perfect place to set all the initial options etc, such as turning on and off modules.
+*/
+module KateBaldspotOptions
+{
+	trigger OnPostLoadStory
+	{
+		call StoryLoad
+	}
+	
+	script StoryLoad
+	{
+		KateAndBaldspot_GameStart.Enabled(true); 	/* Disable/Enable the Kate / Baldspot opening module */
+		TESTING_RaiderStart.Enabled(false);			/* Disable/Enable a quick 'jump to the raider' section... */
+		TESTING_NoTutorial.Enabled(false);
+	}
+}
+
+module TESTING_NoTutorial
+{
+	imports
+	{
+		Base /* grab all base stuff, like inventory items. */
+	}
+
+	trigger OnGameStart
+	{
+		call Setup
+	}
+	
+	script Setup
+	{
+		KateBaldspotCharacters.Player.AddInventory(BaseballBat);
+		KateBaldspotCharacters.Player.AddInventory(Shotgun);
+		KateBaldspotCharacters.Player.AddInventory(ShotgunShells);
+		KateBaldspotCharacters.Player.AddInventory(ShotgunShells);
+		KateBaldspotCharacters.Player.AddInventory(ShotgunShells);
+		KateBaldspotCharacters.Player.AddInventory(ShotgunShells);
+
+		Tutorial.DisableTutorialZombieControl();		
+	}
+
+}
+/*
+**	Quick module that starts off the raider house invasion.
+*/
+module TESTING_RaiderStart
+{
+	imports
+	{
+		Base /* grab all base stuff, like inventory items. */
+	}
+
+	trigger OnGameStart
+	{
+		call KateAndBaldspot_RaiderSection.RaiderEnter,
+		call GiveBobStuff
+	}
+	
+	script GiveBobStuff
+	{
+		KateBaldspotCharacters.Player.AddInventory(Hammer);
+	}
+
+}
+
+/*
+	Module where the characters for the tutorial are created.
+*/
+module KateBaldspotCharacters
+{
+	imports
+	{
+		Base /* grab all base stuff, like inventory items. */
+	}
+	
+	inventory KateInventory
+	{
+
+	}
+
+	character RaiderShop
+	{
+		GunNut, Jack, Bloggs,
+		RaiderInventory,
+		Skin_03,
+		Base_Head2,
+		Base_Torso,
+		Base_Legs,
+		Shirt2=Shirt_DarkBlue,
+		Trousers1=Trousers_Blue,
+		Shoes1,
+	}
+
+	inventory RaiderInventory
+	{
+		Shotgun,
+		BaseballBat,
+		ShotgunShells=20,
+		Lighter,
+		Hammer,
+	}
+
+	character Raider
+	{
+		GunNut, Bobby, Collins,
+		RaiderInventory,
+		Skin_01,
+		Base_Head2,
+		Base_Torso,
+		Base_Legs,
+		Shirt2=Shirt_Black,
+		Trousers1=Trousers_Grey,
+		Shoes1,
+	}
+
+	character Kate
+	{
+		Kate, Kate, Smith,
+		KateInventory,
+	}
+
+	inventory PlayerBobInventory
+	{
+		
+	}
+
+	character Player
+	{
+		null, Bob, Smith,
+		
+		PlayerBobInventory,
+		Skin_01,
+		Base_Head1,
+		Base_Torso,
+		Base_Legs,
+		Shirt1=Shirt_Blue,
+		Trousers1=Trousers_Grey,
+		Shoes1,
+	}
+}
+
+module KateAndBaldspotSetup
+{
+	/*
+		Import so that we can access the characters etc from KateBaldspotCharacters
+	*/
+	imports
+	{
+		KateBaldspotCharacters,
+	}
+	
+	zone tutArea
+	{
+		5, 1,
+		75, 33
+	}
+
+	waypoint KateInBed
+	{
+		40, 23, 1
+	}
+
+	waypoint BobStart
+	{
+		41, 23, 1
+	}
+	
+	waypoint ShopSpawn
+	{
+		127, 66, 0
+	}
+	
+	waypoint TestZombieSpawn
+	{
+		42, 25, 1
+	}
+
+	/* Additional parameters are required for character creator, stores internally a list of 'Heads' or whatever with all textures containing the name 'Base_Head', so they can be accessed in-game */
+	script LoadCharacterTextures
+	{
+		LoadTexturePage(zombieFrames);
+		LoadTexturePage(characters);
+		LoadedCharacters.Set(yes);
+	}
+
+	scriptflag LoadedCharacters
+	{
+		no
+	}
+
+	script LoadMapTextures
+	{
+		LoadTexturePage(tiles1);
+		LoadTexturePage(tiles2);
+		LoadTexturePage(tiles3);
+		LoadTexturePage(tiles4);
+	}
+	script CreateCharacters
+	{
+		Kate.Actualize(KateInBed);
+		Player.Actualize(BobStart);
+		Player.Face(W);
+	}
+	trigger OnPreMapLoad
+	{
+		call LoadMapTextures
+	}
+
+	trigger OnPreCharacterCreation
+	{
+		call LoadCharacterTextures
+	}
+
+	/*
+		Load characters if there was no character generation...
+	*/
+	trigger OnPostMapLoad
+	{	
+		call LoadCharacterTextures
+	}
+
+	trigger OnPostMapLoad
+	{	
+		call CreateCharacters
+	}
+
+
+	containeritemdistribution
+	{	
+		Room					=			tutKitchen1,	
+		Containers		=			counter,		
+		TinOpener			=			1,				
+		Pot						=			1,	
+	}
+
+	containeritemdistribution
+	{
+		Room					=			tutKitchen2,
+		Containers		=			counter,
+		TinnedSoup		=			3,
+	}
+
+	containeritemdistribution
+	{
+		Room					=			tutorialBathroom,
+		Containers		=			medicine,
+		Pills					=			1,
+	}
+
+	containeritemdistribution
+	{
+		Room					=			tutorialBedroom,
+		Containers		=			wardrobe,
+		Sheet					=			1,
+		Pillow				=			1,
+	}
+}

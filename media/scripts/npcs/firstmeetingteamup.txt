@@ -1,0 +1,32 @@
+module Base
+{
+
+	instancescript FirstMeetTeamUp
+	{
+		if(Other.IsAggressive() && !Met.IsAggressive())
+		{
+			callwait FirstMeetTeamupNeutralAggressive;
+			StopScript();
+		}
+		if(Other.IsAggressive() && Met.IsAggressive())
+		{
+			callwait FirstMeetTeamupAggressiveAggressive;
+			StopScript();
+		}
+		/*
+			TEMP
+		*/
+		if(Other.IsAggressive())
+		{
+			callwait FirstMeetTeamupNeutralAggressive;
+			StopScript();
+		}
+		else
+		{
+			callwait FirstMeetTeamupAggressiveAggressive;
+			StopScript();
+	
+		}
+
+	}
+}

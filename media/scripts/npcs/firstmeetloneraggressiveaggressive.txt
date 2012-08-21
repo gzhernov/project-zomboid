@@ -1,0 +1,197 @@
+module Base
+{
+
+	randomselector FirstMeetLonerAggressiveAggressive
+	{
+		FirstMeetLonerAggressiveAggressive1,
+		FirstMeetLonerAggressiveAggressive2,
+		FirstMeetLonerAggressiveAggressive3,
+		FirstMeetLonerAggressiveAggressive4,
+		FirstMeetLonerAggressiveAggressive5,
+		FirstMeetLonerAggressiveAggressive6,
+		FirstMeetLonerAggressiveAggressive7,
+		FirstMeetLonerAggressiveAggressive8,
+		FirstMeetLonerAggressiveAggressive9,
+		FirstMeetLonerAggressiveAggressive10,
+	}
+	
+	instancescript FirstMeetLonerAggressiveAggressive1
+	{
+		Other.SayIdle(
+				"I need some help taking these dead guys down. You in?"
+			);
+		Met.SayIdle(
+				"Back the hell off."
+			);
+		Other.Anger(50);
+		Other.SayIdle(
+				"Hey, fuck you man!"
+			);
+	
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+	
+	instancescript FirstMeetLonerAggressiveAggressive2
+	{
+		Other.SayIdle(
+				"Want to help me out?"
+			);
+		Met.SayIdle(
+				"No way in hell. Get lost."
+			);
+		Other.Anger(50);
+		Other.SayIdle(
+				"What the? Fuck you!"
+			);
+	
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+	
+	instancescript FirstMeetLonerAggressiveAggressive3
+	{
+		Other.SayIdle(
+				"Hey! Want to team up?"
+			);
+		Met.SayIdle(
+				"With some loser like you? I'd be dead in minutes..."
+			);
+		Other.Anger(50);
+		Other.SayIdle(
+				"Less time than that asshole."
+			);
+		
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+
+	instancescript FirstMeetLonerAggressiveAggressive4
+	{
+		Other.SayIdle(
+				"You gunning for them, or me?"
+			);
+		Met.SayIdle(
+				"Every bastard I see."
+			);
+		Other.Anger(50);
+		Other.SayIdle(
+				"If that's the way it is. That's the way it is."
+			);
+		
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+
+	instancescript FirstMeetLonerAggressiveAggressive5
+	{
+		Other.SayIdle(
+				"Killin' these bastards is easy. Want in?"
+			);
+		Met.SayIdle(
+				"When killin' you is so much easier?"
+			);
+		Other.Anger(50);
+		Other.SayIdle(
+				"Don't even think about it."
+			);
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+
+	instancescript FirstMeetLonerAggressiveAggressive6
+	{
+		Other.SayIdle(
+				"I'm clearing this neighborhood. Want in?"
+			);
+		Met.SayIdle(
+				"I can do that on my own."
+			);
+		Met.SayIdle(
+				"I can even do it when you've had your face knocked clean off..."
+			);
+		Other.Anger(50);
+	
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+
+
+	instancescript FirstMeetLonerAggressiveAggressive7
+	{
+		Other.SayIdle(
+				"Hey stranger. Where you goin'?"
+			);
+		Met.SayIdle(
+				"No place. And not with you neither..."
+			);
+		Other.Anger(50);
+		Other.SayIdle(
+				"If you're not with me pal, you're against me."
+			);
+	
+	
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+
+	instancescript FirstMeetLonerAggressiveAggressive8
+	{
+		Other.SayIdle(
+				"Hey deadmeat. You're with me, right? "
+			);
+		Met.SayIdle(
+				"You're a walkin' talkin' meal for a dead guy. Never gonna happen."
+			);
+		Other.Anger(50);
+		Other.SayIdle(
+				"Wrong answer."
+			);
+	
+	
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+
+	instancescript FirstMeetLonerAggressiveAggressive9
+	{
+		Other.SayIdle(
+				"You: with me."
+			);
+		Met.SayIdle(
+				"That a come on?"
+			);
+		Other.SayIdle(
+				"It's your fuckin' salvation, asshole!"
+			);
+		Other.Anger(50);
+		Met.SayIdle(
+				"Poor choice of last words. "
+			);
+	
+	
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+instancescript FirstMeetLonerAggressiveAggressive10
+	{
+		Other.SayIdle(
+				"Need someone to watch your back? "
+			);
+		Met.SayIdle(
+				"I'm better off alone."
+			);
+		Other.SayIdle(
+				"You think I'm just going to loot this place for yourself?"
+			);
+		Met.Anger(50);
+		Met.SayIdle(
+				"You had to make a scene, didn't you?"
+			);
+	
+	
+		Other.AddEnemy(Met);
+		Met.AddEnemy(Other);
+	}
+
+}

@@ -1,0 +1,64 @@
+module Base
+{
+	
+/* -- Chewed by zombies ---------------------------------------- */
+	
+	scriptflag ChewedByZombies_1ManCount
+	{
+		1
+	}
+	
+	scriptflag ChewedByZombies_2ManCount
+	{
+		1
+	}
+	
+	scriptflag ChewedByZombies_1ManCount
+	{
+		1
+	}
+	
+	instancescript ChewedByZombies_1Man1
+	{
+		Chewed.SayIdle(
+					"AARRGGHH!!!",
+					"No, no, AAARGGGHH!",
+					"Help me! ARGH! AAARGH!",
+					"Fucking HELL!",
+					"I hope you fucking CHOKE!",
+					"Get off me! GET OFF!",
+					"Shit! Shit! AAARGH!",
+					"Oh GOD! AAARGH! Jesus!",
+					"Fuck you! Fu--AARGH!"
+					);
+	}
+	
+	instancescript ChewedByZombies_2Man1
+	{
+		Chewed.SayIdle(
+					"AARRGGHH!!!",
+					"No, no, AAARGGGHH!",
+					"Help me! ARGH! AAARGH!",
+					"Fucking HELL!",
+					"I hope you fucking CHOKE!",
+					"Get off me! GET OFF!",
+					"Shit! Shit! AAARGH!",
+					"Oh GOD! AAARGH! Jesus!",
+					"Fuck you! Fu--AARGH!"
+					);
+
+		A.SayIdle(
+					"Jesus Christ...",
+					"Fuck me...",
+					"Oh God...",
+					"I'm gonna be sick...",
+					"Sweet Jesus...",
+					"Oh God no!",
+					"NOOOO!",
+					"Oh no!",
+					"Oh shit...",
+					"Oh my God!",
+					"Fuck."
+					);
+	}
+}

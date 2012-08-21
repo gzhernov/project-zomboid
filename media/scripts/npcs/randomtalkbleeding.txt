@@ -1,0 +1,78 @@
+module Base
+{
+	
+	scriptflag RandomTalkBleeding_1ManCount
+	{
+		1
+	}
+	
+	scriptflag RandomTalkBleeding_2ManCount
+	{
+		1
+	}
+	
+	scriptflag RandomTalkBleeding_3ManCount
+	{
+		1
+	}
+	
+	instancescript RandomTalkBleeding_1Man1
+	{
+			A.SayIdle(
+					"Damn it, this hurts!",
+					"Fucking hell, this hurts!",
+					"Jesus... the PAIN!",
+					"Fuck me, look at all that blood!",
+					"Gotta stop this bleeding!"
+					);
+	}
+	
+	instancescript RandomTalkBleeding_2Man1
+	{
+			A.SayIdle(
+					"Damn it, this hurts!",
+					"Fucking hell, this hurts!",
+					"Jesus... the PAIN!",
+					"Fuck me, look at all that blood!",
+					"Gotta stop this bleeding!"
+					);
+			
+			B.SayIdle(
+					"Hang in there!",
+					"We'll find some med.",
+					"We'll get you patched up. Don't worry.",
+					"Fuck me, you look awful.",
+					"Jesus, look at the state of you!",
+					"You gotta hang in there!"
+					);
+	}
+	
+	instancescript RandomTalkBleeding_3Man1
+	{
+			A.SayIdle(
+					"Damn it, this hurts!",
+					"Fucking hell, this hurts!",
+					"Jesus... the PAIN!",
+					"Fuck me, look at all that blood!",
+					"Gotta stop this bleeding!"
+					);
+			
+			B.SayIdle(
+					"Hang in there!",
+					"We'll find some med.",
+					"We'll get you patched up. Don't worry.",
+					"Fuck me, you look awful.",
+					"Jesus, look at the state of you!",
+					"You gotta hang in there!"
+					);
+					
+			C.SayIdle(
+					"You'll be fine!",
+					"Yeah, hang in there!",
+					"Yeah, we'll find some med.",
+					"Yeah, we'll get you patched up.",
+					"You look FUCKING awful.",
+					"Jesus, you're falling apart!"
+					);
+	}
+}

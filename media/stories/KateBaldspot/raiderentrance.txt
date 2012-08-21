@@ -1,0 +1,476 @@
+module KateAndBaldspot_RaiderSection
+{
+	/*
+		Import so that we can access the characters etc from KateBaldspotCharacters
+	*/
+	imports
+	{
+		KateBaldspotCharacters,
+	}
+	
+	waypoint RaiderSpawn { 67, 29, 0 }
+
+	waypoint OutsideFrontDoor { 48, 27, 0 }
+
+	waypoint OutsideBackDoor { 37, 24, 0 }
+
+	waypoint InsideBackDoor { 40, 24, 0 }
+
+	waypoint InsideMainHall { 48, 24, 0 }
+
+	waypoint InStoreRoom { 53, 24, 0 }
+
+	waypoint InDownstairsBathroom { 52, 21, 0 }
+
+	waypoint BottomOfStairs { 45, 20, 0 }
+	waypoint BottomOfStairsRaiderFollow { 45, 21, 0 }
+
+	waypoint TopOfStairs { 41, 20, 1 }
+
+	waypoint OutsideKatesRoom { 42, 21, 1 }
+
+	waypoint InsideKatesRoom { 42, 22, 1 }
+
+	waypoint InsideKatesRoomBackWall { 42, 26, 1 }
+	waypoint RaiderStandBedroomSpottedPlayer { 39, 24, 1 }
+	waypoint RaiderStandBedroomNotSpottedPlayer { 38, 20, 1 }
+
+	script RaiderEnterHouseA
+	{
+		Raider.Walk(OutsideFrontDoor);
+		Raider.Walk(InsideMainHall);
+	}
+
+	script RaiderEnterHouseB
+	{
+		Raider.Walk(OutsideFrontDoor);
+		Raider.Walk(OutsideBackDoor);
+		Raider.Walk(InsideBackDoor);
+		Raider.Walk(InsideMainHall);
+	}
+
+	/*******************************************************************************************
+	**	Set up a trigger to call 'RaiderSpotsPlayer' every time the player is spotted...
+	********************************************************************************************/
+	trigger OnSpotPlayer
+	{
+		RaiderCheckVisibility.Is(yes) && OnSpotPlayer.IsLastFiredParameter(Raider) && !RaiderSpotsPlayer.IsPlaying(),
+		call RaiderSpotsPlayer
+	}
+
+	trigger OnSpotPlayer
+	{
+		RaiderCheckVisibility.Is(yes) && OnSpotPlayer.IsLastFiredParameter(Raider) && Player.IsInside(),
+		call RaiderSpotsPlayerInside
+	}
+
+	trigger OnSpotPlayer
+	{
+		Player.IsAggressivePose() && RaiderCheckVisibility.Is(yes),
+		call RaiderDefendSelf
+	}
+	
+	script RaiderSpotsPlayerInside
+	{
+		RaiderSpottedPlayerInside.Set(yes);
+	}
+
+	scriptflag RaiderSpottedPlayerInside
+	{
+		no
+	}
+
+	/*******************************************************************************************
+	**	Set up a trigger to call 'RaiderLoseSightOfPlayer' every time the player disappears from raider's vision...
+	********************************************************************************************/
+	trigger OnLoseSightOfPlayer
+	{
+		RaiderCheckVisibility.Is(yes) && OnLoseSightOfPlayer.IsLastFiredParameter(Raider) && !RaiderLoseSightOfPlayer.IsPlaying(),
+		call RaiderLoseSightOfPlayer
+	}
+
+	/* Clears all the currently active scripts when the raider dies. */
+	trigger OnCharacterDeath
+	{
+		OnCharacterDeath.IsLastFiredParameter(Raider),
+		call RaiderDeathAlways
+	}
+
+	/* Trigger Kate's conversation post Raider death. */
+	trigger OnCharacterDeath
+	{
+		OnCharacterDeath.IsLastFiredParameter(Raider),
+		call RaiderDeath
+	}
+
+	trigger OnPlayerMoved
+	{
+		RaiderCanSeePlayer.Is(yes) && RaiderBotheredAboutMoving.Is(yes) && TimeSinceLastRan(1.0),
+		call PlayerMovedWhenRaiderSaysNotTo
+	}
+
+	trigger OnPlayerMoved
+	{
+		RaiderCanSeePlayer.Is(yes) && RaiderBotheredAboutMoving.Is(yes) && MoveChances.IsGreaterThanEqualTo(3),
+		call RaiderGoHostile
+	}
+
+	/*******************************************************************************************
+	**	Flag to determine what raider should do if he spots the player
+	********************************************************************************************/
+	scriptflag RaiderSpotPlayerAction
+	{
+		initialspeech /* initial value */
+	}
+
+	/*******************************************************************************************
+	**	Flag to determine what raider should do if he loses sight of the player 
+	********************************************************************************************/
+	scriptflag RaiderLoseSightOfPlayerAction
+	{
+		initialspeech /* initial value */
+	}
+
+	scriptflag RaiderBotheredAboutMoving
+	{
+		no /* initial value */
+	}
+
+	scriptflag RaiderCheckVisibility
+	{
+		yes /* initial value */
+	}
+
+	scriptflag MoveChances
+	{
+		0
+	}
+
+	scriptflag RaiderCanSeePlayer
+	{
+		no
+	}
+
+	script CancelAllRaiderTriggers
+	{
+		RaiderCheckVisibility.Set(no);
+		RaiderBotheredAboutMoving.Set(no);
+
+	}
+	
+	script RaiderDefendSelf
+	{
+		callwait CancelAllRaiderTriggers;
+		StopAllScriptsExcept(RaiderDefendSelf);
+		Raider.AddEnemy(Player);
+		Raider.AddEnemy(Kate);
+		Raider.AllowBehaviours(true);
+		Raider.AimWhileStationary(Player);
+		Raider.Wait(0.1);
+		Raider.Attack();
+		Raider.Say("Sneaky son of a bitch.");	
+
+	}
+
+	script RaiderGoHostile
+	{
+		callwait CancelAllRaiderTriggers;
+		StopAllScriptsExcept(RaiderGoHostile);
+		Raider.AddEnemy(Player);
+		Raider.AddEnemy(Kate);
+		Raider.AllowBehaviours(true);
+		Raider.SayIdle("I'm gonne blow you away, motherfucker!");	
+	}
+
+	script PlayerMovedWhenRaiderSaysNotToA
+	{
+		PauseAllScriptsExcept(PlayerMovedWhenRaiderSaysNotToA);
+		Player.Say("");
+		Raider.Say("Hey!");
+		ResumeAllScriptsExcept(PlayerMovedWhenRaiderSaysNotToA);
+		MoveChances.Increment();
+	}
+
+	script PlayerMovedWhenRaiderSaysNotToB
+	{
+		PauseAllScriptsExcept(PlayerMovedWhenRaiderSaysNotToB);
+		Player.Say("");
+		Raider.Say("Don't move unless I say so.");
+		ResumeAllScriptsExcept(PlayerMovedWhenRaiderSaysNotToB);
+		MoveChances.Increment();
+	}
+
+	script PlayerMovedWhenRaiderSaysNotToC
+	{
+		PauseAllScriptsExcept(PlayerMovedWhenRaiderSaysNotToC);
+		Player.Say("");
+		Raider.Say("Move again and you're a dead man.");
+		ResumeAllScriptsExcept(PlayerMovedWhenRaiderSaysNotToC);
+		MoveChances.Increment();
+	}
+
+	script RaiderDeath
+	{
+		if(Raider.IsInRoom(Kate))
+		{
+			Kate.Say("Jesus, Sweetheart.");
+			Kate.Say("Never thought I'd be so glad to see inside a guy's head.");
+			Player.Say("I thought we were finished.");
+			Kate.Say("I love you, you know.");
+			Player.Say("Even better...");
+			Player.Say("Now I have a shotgun.");
+			Kate.Say("God damn but you're an idiot.");
+			Kate.Say("Go get back to surviving...");
+		}
+	}
+
+	script RaiderDeathAlways
+	{
+		StopAllScriptsExcept();
+	}
+
+	randomselector PlayerMovedWhenRaiderSaysNotTo
+	{
+		PlayerMovedWhenRaiderSaysNotToA,
+		PlayerMovedWhenRaiderSaysNotToB,
+		PlayerMovedWhenRaiderSaysNotToC
+	}
+
+	script RaiderIntroduction
+	{
+		Raider.AimWhileStationary(Player);
+		Raider.Say("Howdy Neighbor.");	
+		RaiderBotheredAboutMoving.Set(yes);
+		Player.Say("Look, we're just camped out here.");	
+		Player.Say("The threat's outside. Not in here.");	
+		Raider.Say("I was just out in the street. Heard your radio.");				
+		RaiderBotheredAboutMoving.Set(no);
+		RaiderCheckVisibility.Set(no);
+		
+		/* Only tell player to get inside if they are outside */
+		if(!Player.IsInside())
+		{
+			Raider.Say("Inside!");	
+			Raider.Wait(Player.IsInside());
+		}		
+		
+		Raider.WalkToLastKnownLocationOf(Player);
+		
+		/* Only tell player to get upstairs if they are downstairs */
+		if(Player.IsOnFloor(0))
+		{
+			Raider.Say("Upstairs!");	
+			/* Check if player is still downstairs after warning, if so... */
+			if(Player.IsOnFloor(0))
+			{
+				/* Wait until they are at the bottom of the stairs */
+				Raider.Wait(Player.InRange(BottomOfStairs, 2));
+			}
+			/* Walk to near bottom of stairs */
+			Raider.Walk(BottomOfStairsRaiderFollow);
+			
+			/* Player still downstairs? Give another warning. */
+			if(Player.IsOnFloor(0))
+			{
+				Raider.Say("I said UPSTAIRS!");	
+			}
+		
+			Raider.Wait(Player.IsOnFloor(1));
+		}	
+		/* So by now the player must be upstairs, so tell him to get into kate's room if they are not already. */
+		if(!Player.IsInRoom(Kate))
+		{
+			Raider.Walk(TopOfStairs);
+			Raider.Say("Into the room!");		
+			Raider.Wait(Player.IsInRoom(Kate));
+		}
+		
+		/* If the Raider is not already in Kate's room, then walk to the outside of the door. */
+		if(!Raider.IsInRoom(Kate))
+		{
+			Raider.Walk(OutsideKatesRoom);
+		}	
+		
+		Raider.Say("Stand against the back wall, where I can see you!");	
+		Raider.Wait(Player.InRange(InsideKatesRoomBackWall, 2));
+		Raider.Walk(RaiderStandBedroomSpottedPlayer);
+		Raider.Say("So how y'all doing?");	
+		Kate.Say("I heard you downstairs.");	
+		Kate.Say("We've got nothing. Just leave us alone.");	
+		Raider.Say("You ain't got nothing darlin'. You got bit.");	
+		Raider.Say("Now, that's a something.");	
+		
+		Player.Say("That's not a bite! It's a break!");	
+		Player.Say("We were running from you! From your people! She fell.");	
+		Raider.Say("Sure looks like a bite from here.");
+		Raider.Say("And so you know, that's a thing I just can't stand...");
+		Kate.Say("It isn't a goddam bite!");
+		Raider.Say("I like this house. I'm taking it.");
+		Raider.Say("That means I clean out the infected trash.");
+		Raider.Say("Wifey dies in three seconds Baldspot. Pay attention.");
+		Player.Say("You asshole! No!");	
+		
+		Raider.AimWhileStationary(Kate);
+		Raider.Say("Three.");	
+		Raider.Say("Two.");		
+		Raider.AddEnemy(Kate);
+		Raider.Attack();
+		Player.Say("Kate! Oh God no!");
+		Raider.AimWhileStationary(Player);
+		Raider.Say("Now did I say I'd fire on one, or after one?");	
+		Player.Say("You motherfucker! Nooo!");	
+		Raider.AddEnemy(Player);
+		Raider.Attack();
+		Raider.Wait(0.2);
+		Raider.AllowBehaviours(true);
+		Raider.Say("Sweet dreams.");
+	}
+		
+	script RaiderThereYouAre
+	{
+		Raider.Say("There you are.");			
+		MoveChances.Increment();
+		MoveChances.Increment();
+		MoveChances.Increment();				
+		Raider.Say("Move another muscle and you're dead.");		
+		RaiderBotheredAboutMoving.Set(yes);
+		Raider.Say("Now, as I was saying...");	
+		ResumeAllScriptsExcept();
+	}
+
+	/*******************************************************************************************
+	**	Script handling what happens if raider spots the player.
+	********************************************************************************************/
+	script RaiderSpotsPlayer
+	{
+		RaiderCanSeePlayer.Set(yes);
+		if(RaiderSpotPlayerAction.Is("initialspeech"))
+		{
+			RaiderSpotPlayerAction.Set("spottedfirsttime");
+			StopAllScriptsExcept(RaiderSpotsPlayer);				
+			RaiderBotheredAboutMoving.Set(yes);
+			call RaiderIntroduction;
+		}
+		if(RaiderSpotPlayerAction.Is("thereyouare"))
+		{
+			RaiderSpotPlayerAction.Set("spottedfirsttime");
+			StopAllScriptsExcept(RaiderSpotsPlayer, RaiderIntroduction);
+			Raider.Wait(1);
+			call RaiderThereYouAre;
+			
+		}
+	}
+
+	/*******************************************************************************************
+	**	Script handling what happens if raider loses sight of player.
+	********************************************************************************************/
+	script RaiderLoseSightOfPlayer
+	{
+		RaiderCanSeePlayer.Set(no);
+		RaiderBotheredAboutMoving.Set(no);
+		if(RaiderLoseSightOfPlayerAction.Is("initialspeech"))
+		{
+			RaiderSpotsPlayer.StopScript();
+			PauseAllScriptsExcept(RaiderLoseSightOfPlayer);
+			RaiderLoseSightOfPlayerAction.Set("lostfirsttime");
+			RaiderSpotPlayerAction.Set("thereyouare");
+			Player.Say("");
+			Raider.Say("Hey!");	
+			Raider.Say("Come back!");	
+			Raider.Wait(4);
+			Raider.AllowBehaviours(true);	
+			callwait CancelAllRaiderTriggers;
+			Raider.SayIdle("Coming to get you!");		
+			Raider.AddEnemy(Kate);
+			Raider.AddEnemy(Player);
+		}
+		
+	}
+		
+	/*******************************************************************************************
+	**	Raider searches downstairs.
+	********************************************************************************************/
+	script RaiderSearchDownstairs
+	{
+		Raider.Walk(InStoreRoom);
+		Raider.Wait(1);
+		Raider.Face(W);
+		Raider.Wait(1);
+		Raider.Walk(InDownstairsBathroom);
+		Raider.Wait(1);
+		Raider.Face(W);
+		Raider.Wait(1);
+		Raider.Walk(BottomOfStairs);
+		Raider.Face(W);
+		Raider.Wait(1);
+		Raider.Walk(TopOfStairs);
+	}
+
+	/*******************************************************************************************
+	**	Raider searches upstairs.
+	********************************************************************************************/
+	script RaiderSearchUpstairs
+	{
+		Raider.Walk(OutsideKatesRoom);
+		Raider.Face(E);
+		Raider.Wait(1);
+		Raider.Face(N);
+		Raider.Wait(1);
+		Raider.Face(S);
+		Raider.Walk(InsideKatesRoom);
+		Raider.Walk(RaiderStandBedroomNotSpottedPlayer);
+		Raider.Face(W);
+		Raider.Say("Howdy Neighbor.");
+		Kate.Say( "Who the hell are you?" );
+		Raider.Say( "Ah you know. Just someone new to the area." );
+		Raider.Say( "Heard yer radio." );
+		Raider.Say( "Got any li'l friends round here, tendin' to those wounds?" );
+		Kate.Say( "Just little old me." );
+		Raider.Say( "Well I thought I'd come by and take yer stuff..." );
+		Raider.Say( "But turns out you ain't got shit." );
+		Raider.Say( "So I'm takin' yer hideout. Just to improve the day." );
+		Kate.Say( "Look, just turn around and go." );
+		Raider.Say( "You ain't in a position for orderin'" );
+		Raider.Say( "Give it three seconds, and you won't have no position at all." );
+		Raider.Say( "Three." );
+		Raider.Say( "Two." );
+		Raider.AddEnemy(Kate);
+		Raider.Attack();
+		Raider.Say("Sweet dreams, sister.");
+		if(Player.IsInRoom(Kate))
+		{
+			Player.Say("Kate! Oh God no!");
+			Raider.AimWhileStationary(Player);			
+			Raider.Attack();
+		}
+		Raider.AddEnemy(Player);
+		Raider.Wait(0.2);
+		Raider.AllowBehaviours(true);
+
+		
+	}
+
+	/*******************************************************************************************
+	**	When called like a script, it will play a random script. In this case offering two ways the raider may enter the house.
+	**	Either will end him in the main hall. 
+	********************************************************************************************/
+	randomselector RaiderEnterHouse
+	{
+		RaiderEnterHouseA,
+		RaiderEnterHouseB
+	}
+
+	/*******************************************************************************************
+	**	Create the raider and call scripts to get him upstairs if uninterrupted.
+	********************************************************************************************/
+	script RaiderEnter
+	{
+		Raider.Actualize(RaiderSpawn);
+		Raider.Equip(Base.Shotgun);
+		Raider.AllowBehaviours(false);
+		callwait RaiderEnterHouse;		/* call one of the enter house variants, and wait till they complete */
+		callwait RaiderSearchDownstairs;
+		callwait RaiderSearchUpstairs;
+		
+	}
+}

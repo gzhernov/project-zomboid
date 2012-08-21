@@ -1,0 +1,193 @@
+module KateAndBaldspot_GameStart
+{
+	/*******************************************************************************************
+	**	Triggers added to start of game to launch tutorial.
+	********************************************************************************************/
+	trigger OnGameStart
+	{
+		call KateAndBaldspot_SoupMaking.CreateTendWifeQuest,
+		call KateAndBaldspot_SoupMaking.CreateBarricadeQuest,
+		call KateAndBaldspot_SoupMaking.CreateFastFoodQuest,
+		call KateAndBaldspot_SoupMaking.CreateMakeSoupQuest,
+		call KateAndBaldspot_SoupMaking.OpeningConversation,
+		/*call KateAndBaldspot_RaiderSection.RaiderEnter,*/
+	}	
+}
+
+module KateAndBaldspot_SoupMaking
+{
+	/*
+		Import so that we can access the characters etc from KateBaldspotCharacters
+	*/
+	imports
+	{
+		KateBaldspotCharacters,
+		KateBaldspotLanguage,
+	}
+	
+	waypoint ShedDoor
+	{
+		19, 24, 0
+	}
+
+	waypoint InsideTutBedroomDoor
+	{
+		43, 22, 1 
+	}
+
+	trigger OnUseItemOnCharacter
+	{
+		OnUseItemOnCharacter.IsLastFiredParameter(0, Kate) && OnUseItemOnCharacter.IsLastFiredParameter(1, Pillow),
+		call Smother
+	}
+		
+	script Smother
+	{
+		LockHud(true);
+		Kate.Say( @SmotherLanguage-0 );
+		Kate.Say( @SmotherLanguage-1 );
+		Kate.Say( @SmotherLanguage-2 );
+		Kate.Say( @SmotherLanguage-3) ;
+		Kate.Die(false);
+		Player.AddInventory(KatePic);
+		LockHud(false);
+		Quest.LockQuest("BarricadeQuest");
+		Quest.LockQuest("TendWifeQuest");
+		Quest.LockQuest("FastFoodQuest");
+		Quest.LockQuest("MakeSoupQuest");
+	}
+
+	/*******************************************************************************************
+	**	Barricade quest... called after you've given Kate pills and bandages.
+	********************************************************************************************/
+	script CreateBarricadeQuest
+	{
+		Quest.CreateQuest("BarricadeQuest", @BarricadeQuestLanguage-0  );
+			Quest.RunScriptOnComplete("SleepBeforeSupplies");
+			Quest.AddGotoLocationTask("tutorial2A",  @BarricadeQuestLanguage-1, ShedDoor);
+				Quest.Unlock();
+				Quest.UnlockNextTasksOnComplete(3);
+			Quest.AddFindItemTask( "tutorial2B",  @BarricadeQuestLanguage-2, Hammer, 1 );
+				Quest.UnlockTaskOnComplete( "tutorial2D" );
+			Quest.AddFindItemTask( "tutorial2E",  @BarricadeQuestLanguage-3, Plank, 1 );
+			Quest.AddFindItemTask( "tutorial2F",  @BarricadeQuestLanguage-4, Nails, 1 );
+			Quest.AddEquipItemTask( "tutorial2D",  @BarricadeQuestLanguage-5, Hammer );
+				Quest.UnlockNextTasksOnComplete(1);
+			Quest.AddHardCodedTask("tutorial2G", @BarricadeQuestLanguage-6, "barricadeTutorial");
+				Quest.UnlockNextTasksOnComplete(1);
+			Quest.AddGotoLocationTask( "tutorial2ZZQ",  @BarricadeQuestLanguage-7, InsideTutBedroomDoor );
+		
+	}
+
+	/*******************************************************************************************
+	**	Opening quest. Make bandages, find pills. Give them to Kate.
+	********************************************************************************************/
+	script CreateTendWifeQuest
+	{
+		Quest.CreateQuest("TendWifeQuest", @TendWifeQuestLanguage-0);
+			Quest.RunScriptOnComplete("BobBarricade");
+			Quest.AddFindItemTask("FindSheets",  @TendWifeQuestLanguage-1, Sheet, 1);
+				Quest.Unlock();
+				Quest.UnlockNextTasksOnComplete(1);
+			Quest.AddFindItemTask("CraftBandages",  @TendWifeQuestLanguage-2, RippedSheets, 8);
+				Quest.UnlockNextTasksOnComplete(1);
+			Quest.AddUseItemOnTask("BandageLeg",  @TendWifeQuestLanguage-3, RippedSheets, Kate);
+			Quest.AddFindItemTask("FindPainkillers",  @TendWifeQuestLanguage-4, Pills, 1 );	
+				Quest.Unlock();
+			Quest.AddUseItemOnTask("GiveKatePills",  @TendWifeQuestLanguage-5, Pills, Kate);
+				Quest.Unlock();
+				Quest.RunScriptOnComplete("TakeThesePills");
+		
+		
+	}
+	/*******************************************************************************************
+	**	Script where Kate says to sleep before hunting for supplies.
+	********************************************************************************************/
+	script SleepBeforeSupplies
+	{
+		Player.Say(@SleepBeforeSuppliesLanguage-0);	
+		Kate.Say(@SleepBeforeSuppliesLanguage-1);	
+		Player.Say( @SleepBeforeSuppliesLanguage-2 );
+		Kate.Say(@SleepBeforeSuppliesLanguage-3 );
+		Player.Say( @SleepBeforeSuppliesLanguage-4 );
+		Kate.Say( @SleepBeforeSuppliesLanguage-5 );
+		Player.Say( @SleepBeforeSuppliesLanguage-6 );
+		
+		if(IsNight())
+		{
+			Kate.Say(@SleepBeforeSuppliesLanguage-7);
+		}
+		else
+		{
+			Kate.Say(@SleepBeforeSuppliesLanguage-8);
+		}
+		
+		Kate.Say(@SleepBeforeSuppliesLanguage-9);	
+		Kate.Say(@SleepBeforeSuppliesLanguage-10);	
+		Hook.RegisterOneTime("OnPlayerWake", "WokeUpInTutorialBed");
+		Player.Sleep(9.0);
+		/*
+			Script follows on from opening2.txt with "WokeUpInTutorialBed" next time the player wakes up.
+		*/
+		
+	}
+
+	/*******************************************************************************************
+	**   Script called after giving pills / bandages to Kate.
+	********************************************************************************************/
+	script BobBarricade
+	{
+		/* Needed to allow for time to say TakeThesePills if pills quest is done last.*/
+		if(Player.IsSpeaking())
+		{
+			Wait(4.0);		
+		}
+		
+		Kate.Say(@BobBarricadeLanguage-0);
+		Kate.Say(@BobBarricadeLanguage-1);
+		Kate.Say( @BobBarricadeLanguage-2);
+		Player.Say(  @BobBarricadeLanguage-3);
+		Player.Say(  @BobBarricadeLanguage-4);
+		Player.Say(  @BobBarricadeLanguage-5);
+		Player.Say(  @BobBarricadeLanguage-6);
+		Kate.Say(  @BobBarricadeLanguage-7);
+		Kate.Say(  @BobBarricadeLanguage-8);
+		Kate.Say(  @BobBarricadeLanguage-9);
+
+		Quest.UnlockQuest("BarricadeQuest");
+	}
+
+	/*******************************************************************************************
+	**	Short dialogue once given Kate pills for player feedback if they do it first.
+	*******************************************************************************************/
+	script TakeThesePills
+	{
+		Player.Say(@TakePillsLanguage-0);	
+		
+	}
+
+	/*******************************************************************************************
+	**	Opening script
+	*******************************************************************************************/
+	script OpeningConversation
+	{		
+		LockHud(true);
+		Wait(2.0);
+		Kate.Say(@OpeningConversationLanguage-0);
+		Player.Say( @OpeningConversationLanguage-1 );
+		Kate.Say(@OpeningConversationLanguage-2);
+		Player.Say(@OpeningConversationLanguage-3);
+		Player.Say(@OpeningConversationLanguage-4);
+		Kate.Say( @OpeningConversationLanguage-5);
+		Player.Say( @OpeningConversationLanguage-6);
+		Kate.Say( @OpeningConversationLanguage-7);
+		Player.Say(@OpeningConversationLanguage-8);
+		Tutorial.AddHelpIconToWorld( @HelpIconLanguage-0,  @HelpIconLanguage-1, Player, -64);
+		Tutorial.AddHelpIconToUIElement(@HelpIconLanguage-2, @HelpIconLanguage-3,  SIDEBAR_INVENTORY, 60, 17);
+		Tutorial.AddHelpIconToUIElement(@HelpIconLanguage-4, @HelpIconLanguage-5,  SIDEBAR_INVENTORY, 60, 48);
+		Tutorial.AddHelpIconToUIElement(@HelpIconLanguage-6, @HelpIconLanguage-7,  SIDEBAR_INVENTORY, 60, 79);
+		
+		LockHud(false);
+		Quest.UnlockQuest("TendWifeQuest");		
+	}
+}

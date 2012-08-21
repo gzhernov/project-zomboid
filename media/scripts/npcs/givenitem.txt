@@ -1,0 +1,27 @@
+module Base
+{
+	
+	scriptflag GivenItemNeededCount
+	{
+		1
+	}
+
+	scriptflag GivenItemUnneededCount
+	{
+		1
+	}
+
+	instancescript GivenItemNeeded1
+	{
+		Taker.SayIdle("Hey thanks!",
+		"That'll come in handy.",
+		"Cheers!");
+	}
+
+	instancescript GivenItemUnneeded1
+	{
+		Taker.SayIdle("Yeah, I'll take that.");
+		
+	}
+	
+}

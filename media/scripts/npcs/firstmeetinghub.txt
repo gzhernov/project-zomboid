@@ -1,0 +1,33 @@
+module Base
+{
+	
+	scriptflag FirstMeetCount
+	{
+		1
+	}
+
+	instancescript FirstMeet1
+	{
+
+		if(Other.IsInGroup() && !Other.IsLeaderOfGroup())
+		{
+			StopScript();
+		}
+				
+		Met.NamedOrder(FaceForConversation, Face, Other, 2);
+		Other.NamedOrder(FaceForConversation, Face, Met, 2);
+		if(Met.TestStat("Loner"))
+		{
+			callwait FirstMeetLoner;				
+		}
+		else
+		{
+			callwait FirstMeetTeamUp;
+		}
+		
+		Met.RemoveNamedOrder(FaceForConversation);		
+		Other.RemoveNamedOrder(FaceForConversation);		
+		
+	}
+	
+}

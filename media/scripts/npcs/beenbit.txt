@@ -1,0 +1,64 @@
+module Base
+{
+
+	scriptflag YouBeenBitCount
+	{
+		1
+	}
+
+	/* instance scripts are different in the sense that the characters in them are context sensitive, not set in stone. */
+	instancescript YouBeenBit1
+	{
+		if(!Other.IsCharacterScriptFlagOver(Bitten, "MentionedBleeding", 0))
+		{
+			Other.IncrementCharacterScriptFlag(Bitten, "MentionedBleeding");
+			Other.WalkWithinRangeOf(Bitten, 4);
+			Other.SayIdle(
+				"You've been bit!",
+				"Jesus! You've been bitten, man - you're dead!",
+				"Is that a... have you been bit?",
+				"Stay back! You've been bitten!"
+				);		
+			Bitten.SayIdle(
+				"No! I haven't! I haven't!",
+				"It's not serious! It's just a...",
+				"Wait, no - it's not... I mean..."
+				);
+				
+			if(Other.TestStat("Compassion"))
+			{
+				Other.SayIdle(
+					"Okay, just stay away from me, okay?",
+					"Just back off! BACK OFF!",
+					"Stay away from me, man!",
+					"Jesus, you're screwed."
+					);
+			}
+			else
+			{
+				Other.Say(
+					"I can't take that chance, sorry.",
+					"Can't risk it. I'll be quick - you won't feel it.",
+					"Fuck me, sorry man but I can't take no risk.",
+					"I'll be doing you a favour, trust me. You don't want to end up like them."
+					);
+				Other.AddEnemy(Bitten);
+				Other.WalkWithinRangeOf(Bitten, 1);
+				Other.AimWhileStationary(Bitten);
+				Other.Attack();
+				Other.AimWhileStationary(null);
+				
+				if(Bitten.IsDead())
+				{
+					Other.SayIdle(
+						"It's better this way.",
+						"You're better off this way.",
+						"Sorry man.",
+						"It was a kindness, really."
+					);
+				}
+			}
+		
+		}
+	}
+}

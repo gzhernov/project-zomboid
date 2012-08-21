@@ -1,0 +1,14 @@
+module Base
+{
+	
+	scriptflag PatchedUpCount
+	{
+		1
+	}
+
+	instancescript PatchedUp1
+	{
+		Hurt.SayIdle("You saved me! Thank you.",
+						"Thought I was a dead man for a second there!");
+	}	
+}

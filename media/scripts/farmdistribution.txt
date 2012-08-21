@@ -1,0 +1,87 @@
+module FarmDistribution
+{
+	imports
+	{
+		Base
+	}
+	validmaps
+	{
+		49_48,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			counter/sidetable/crate,
+		Battery				= 			2,
+		Nails				= 			6,
+		Lighter				= 			1,
+		Torch				= 			1,
+		Pen					= 			10,
+		Pencil				= 			10,
+		Tissue				= 			10,
+		Candle				=			5,
+		Matches				=			15,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			medicine,
+		Pills				= 			2,
+		PillsBeta			= 			2,
+		PillsAntiDep		= 			2,
+		PillsSleepingTablets = 			2,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			fridge,
+		Bread				= 			4,
+		Carrots				= 			2,
+		Steak				= 			2,
+		Chicken				= 			1,
+		Salmon				= 			1,
+		Carrots				= 			1,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			wardrobe,
+		Sheet				= 			10,
+		Belt				= 			1,
+		Socks				= 			1,
+		Pillow				=			1,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			bedroomdrawers,
+		Sheet				= 			5,
+		Vest				= 			2,
+		Sweater				= 			3,
+		Trousers			= 			6,
+		Shoes				= 			1,
+		Magazine			= 			3,
+		Book				= 			1,
+		Socks				= 			1,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			crate,
+		PetrolCan			= 			6,
+		Plank				= 			30,
+		Saw					= 			5,
+		Sledgehammer		= 			1,
+	}
+	
+
+	containeritemdistribution
+	{
+		Containers			= 			crate/counter,
+		Axe					= 			1,
+		Shotgun    			=			1,
+		ShotgunShells		=			10,
+	}
+
+	
+}

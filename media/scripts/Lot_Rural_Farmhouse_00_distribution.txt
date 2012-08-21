@@ -1,0 +1,90 @@
+module Lot_Rural_Farmhouse_00_distribution
+{
+	imports
+	{
+		Base
+	}
+
+	containeritemdistribution
+	{
+		Room				= 			Lot_Rural_Farmhouse_00,
+		Containers			= 			counter/sidetable/crate,
+		Battery				= 			2,
+		Nails				= 			6,
+		Lighter				= 			1,
+		Torch				= 			1,
+		Pen					= 			10,
+		Pencil				= 			10,
+		Tissue				= 			10,
+		Candle				=			5,
+		Matches				=			15,
+	}
+
+	containeritemdistribution
+	{
+		Room				= 			Lot_Rural_Farmhouse_00,
+		Containers			= 			medicine,
+		Pills				= 			1,
+		PillsBeta			= 			1,
+		PillsAntiDep		= 			1,
+		PillsSleepingTablets = 			1,
+	}
+
+	containeritemdistribution
+	{
+		Room				= 			Lot_Rural_Farmhouse_00,
+		Containers			= 			fridge,
+		Bread				= 			2,
+		Carrots				= 			1,
+		Steak				= 			1,
+		Chicken				= 			1,
+		Salmon				= 			1,
+		Carrots				= 			1,
+	}
+
+	containeritemdistribution
+	{
+		Room				= 			Lot_Rural_Farmhouse_00,
+		Containers			= 			wardrobe,
+		Sheet				= 			10,
+		Belt				= 			1,
+		Socks				= 			1,
+		Pillow				=			1,
+	}
+
+	containeritemdistribution
+	{
+		Room				= 			Lot_Rural_Farmhouse_00,
+		Containers			= 			bedroomdrawers,
+		Sheet				= 			5,
+		Vest				= 			2,
+		Sweater				= 			3,
+		Trousers			= 			6,
+		Shoes				= 			1,
+		Magazine			= 			3,
+		Book				= 			1,
+		Socks				= 			1,
+	}
+
+	containeritemdistribution
+	{
+		Room				= 			Lot_Rural_Farmhouse_00,
+		Containers			= 			crate,
+		PetrolCan			= 			6,
+		Plank				= 			30,
+		Saw					= 			5,
+		Sledgehammer		= 			1,
+	}
+	
+
+	containeritemdistribution
+	{
+		Room				= 			Lot_Rural_Farmhouse_00,
+		Containers			= 			crate/counter,
+		Axe					= 			1,
+		Shotgun    			=			1,
+		ShotgunShells		=			10,
+	}
+
+	
+}

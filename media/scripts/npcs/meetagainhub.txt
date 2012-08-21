@@ -1,0 +1,34 @@
+module Base
+{
+	
+	scriptflag MeetAgainCount
+	{
+		1
+	}
+
+	instancescript MeetAgain1
+	{
+		if(!Other.IsInGroup() && Met.IsLeaderOfGroup())
+		{
+			Other.WalkWithinRangeOf(Met, 2);
+		
+			if(Other.TestStat("Loner"))
+			{
+				callwait MeetAgainLoner;
+				
+			}
+			else
+			{
+				callwait MeetAgainTeamUp;
+			}
+		}
+		else
+		{
+			Other.WalkWithinRangeOf(Met, 2);
+
+			callwait MeetAgainAlreadyGroupMembers;
+		}
+		
+	}
+	
+}

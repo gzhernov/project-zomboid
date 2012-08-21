@@ -1,0 +1,327 @@
+module Base
+{
+	scriptflag RandomTalk_1ManCount
+	{
+		1
+	}
+
+	
+	scriptflag RandomTalk_2ManCount
+	{
+		1
+	}
+	
+	scriptflag RandomTalk_3ManCount
+	{
+		1
+	}
+	
+	instancescript RandomTalk_1Man1
+	{
+		if(A.IsNumberOfLocalUnder(1))
+		{
+			if(!A.TestStat("Loner"))
+			{
+				A.SayIdle(
+						"Hello?",
+						"Anyone there?",
+						"Is there anyone alive out there?",
+						"Anyone?",
+						"Hello? Anybody there?",
+						"Is there anybody out there?",
+						"Is there somebody there?",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						""
+						);
+			}
+		}
+	
+		if(A.IsNumberOfEnemiesUnder(1))
+		{
+			if(!A.TestStat("Bravery"))
+			{
+				A.SayIdle(
+						"I don't like this. Too quiet...",
+						"It's too quiet.",
+						"Those things could be anywhere!",
+						"Jesus, I'm scared!",
+						"This is a nightmare!",
+						"Oh God, when will this end?",
+						"",
+						"",
+						"",
+						""
+						);
+			}
+			else
+			{
+				if(A.IsAggressive())
+				{
+					A.SayIdle(
+						"If I see one of those things I'll smash its fucking skull in.",
+						"Where are you, you fuckers?",
+						"I'll fuck you up - you hear me?",
+						"",
+						"",
+						""
+						);
+				}
+			}
+		}
+		else
+		{
+			if(A.IsNumberOfEnemiesUnder(5))
+			{
+				A.SayIdle(
+					"Fuck!",
+					"Oh shit...",
+					"Fucking zeds."
+					);
+			}
+			else
+			{
+				if(A.IsNumberOfEnemiesUnder(10))
+				{
+					A.SayIdle(
+						"Shit, this could be a problem.",
+						"Shit!",
+						"Fuck!",
+						"Oh shit!",
+						"Here we go..."
+						);
+				}
+				else
+				{
+					A.SayIdle(
+						"HOLY SHIT!",
+						"Oh FUCK!",
+						"FUCK!",
+						"Oh SHIT!",
+						"Jesus! There's fucking LOADS!",
+						"Fuck me!",
+						"Oh God...",
+						"Fuck me, that's a lot of them.",
+						"Jesus, there's shit loads!"
+						);
+				}
+			}
+		}
+	}
+	
+	instancescript RandomTalk_2Man1
+	{
+		if(A.IsNumberOfEnemiesUnder(1))
+		{
+			A.SayIdle(
+					"Fuck me, I don't like this. Too quiet...",
+					"It's too quiet.",
+					"Looks like we're safe for now...",
+					"None of those things about, thank fuck!",
+					"Seems quiet...",
+					"I can't see any of those things here."
+					);
+			B.SayIdle(
+					"Yeah, thank God!",
+					"I just want a rest.",
+					"This is freaking me out.",
+					"Keep your voice down!",
+					"Keep quiet!",
+					"Shhhh!"
+					);
+		}
+		else
+		{
+			if(A.IsNumberOfEnemiesUnder(5))
+			{
+				A.SayIdle(
+					"Careful..",
+					"Shit! Zeds!",
+					"Fuck!",
+					"Oh shit...",
+					"Watch out...",
+					"Got some zeds incoming.",
+					"Here we go..."
+					);
+				B.SayIdle(
+					"It's okay, there's not many.",
+					"We can handle this.",
+					"There's only a couple...",
+					"Stay calm.",
+					"There's not so many, we'll be fine...",
+					"Keep your eye out for more...",
+					"Stragglers."
+					);
+			}
+			else
+			{
+				if(A.IsNumberOfEnemiesUnder(10))
+				{
+					A.SayIdle(
+						"Shit, this could be a problem.",
+						"Shit! Zeds!",
+						"Fuck!",
+						"Oh shit...",
+						"Watch out...",
+						"Got some zeds incoming.",
+						"Here we go..."
+						);
+					B.SayIdle(
+						"We can handle this.",
+						"We've dealt with worse.",
+						"Got to stay calm.",
+						"There's not so many, we'll be fine...",
+						);
+				}
+				else
+				{
+					A.SayIdle(
+						"HOLY SHIT!",
+						"Oh FUCK!",
+						"FUCK!",
+						"Oh SHIT!",
+						"Jesus! There's fucking LOADS!",
+						"Fuck me!",
+						"Oh God...",
+						"Fuck me, that's a lot of them!",
+						"Jesus, there's shit loads!"
+						);						
+					B.SayIdle(
+						"Fucking Hell!",
+						"Fuck. Run. RUN!",
+						"Jesus! RUN! NOW!",
+						"Fuck! Fuck! Fuck!",
+						"This can't be happening...",
+						"Oh God no...",
+						"We're dead!",
+						"Shut up and RUN!",
+						"Fucking RUN you idiot!"
+						);
+				}
+			}
+		}
+	}
+
+	instancescript RandomTalk_3Man1
+	{
+		if(A.IsNumberOfEnemiesUnder(1))
+		{
+			A.SayIdle(
+					"Fuck me, I don't like this. Too quiet...",
+					"It's too quiet.",
+					"Looks like we're safe for now...",
+					"None of those things about, thank fuck!",
+					"Seems quiet...",
+					"I can't see any of those things here.",
+					);
+			B.SayIdle(
+					"Yeah, thank God!",
+					"Yeah, thank fuck!",
+					"It's fucking eerie...",
+					"I just want a rest.",
+					"This is freaking me out.",
+					);
+			C.SayIdle(
+					"Quiet, you two!",
+					"Keep your voices down!",
+					"Keep quiet!",
+					"Shhhh!"
+					);
+		}
+		else
+		{
+			if(A.IsNumberOfEnemiesUnder(5))
+			{
+				A.SayIdle(
+					"Careful..",
+					"Shit! Zeds!",
+					"Fuck!",
+					"Oh shit...",
+					"Watch out...",
+					"Got some zeds incoming.",
+					"Here we go..."
+					);
+				B.SayIdle(
+					"It's okay, there's not many.",
+					"We can handle this.",
+					"There's only a couple...",
+					"There's not so many, we'll be fine...",
+					"Keep your eye out for more...",
+					"It's just a couple of stragglers."
+					);
+				C.SayIdle(
+					"We can't be too careful.",
+					"Be careful, guys.",
+					"Stay calm.",
+					"There could be more out there..."
+					);
+			}
+			else
+			{
+				if(A.IsNumberOfEnemiesUnder(10))
+				{
+					A.SayIdle(
+						"Shit, this could be a problem.",
+						"Shit! Zeds!",
+						"Fuck!",
+						"Oh shit...",
+						"Watch out...",
+						"Got some zeds incoming!",
+						"Here we go..."
+						);
+					B.SayIdle(
+						"We can handle this.",
+						"We've dealt with worse.",
+						"Got to stay calm.",
+						"There's not so many, we'll be fine...",
+						"We'll fucking KILL them!",
+						"We'll smash their fucking heads in!",
+						);
+					C.SayIdle(
+						"We can't be too careful.",
+						"Be careful, guys.",
+						"Stay calm.",
+						"I don't know, this could be trouble...",
+						"Dunno, looks kind of dangerous to me.",
+						"Fuckitty fuck fuck...",
+						);
+				}
+				else
+				{
+					A.SayIdle(
+						"HOLY SHIT!",
+						"Oh FUCK!",
+						"FUCK!",
+						"Oh SHIT!",
+						"Jesus! There's fucking LOADS!",
+						"Fuck me!",
+						"Oh God...",
+						"Fuck me, that's a lot of them.",
+						"Jesus, there's shit loads!"
+						);						
+					B.SayIdle(
+						"Fucking Hell!",
+						"Fuck. Run. RUN!",
+						"Jesus! RUN! NOW!",
+						"Fuck! Fuck! Fuck!",
+						"This can't be happening...",
+						"Oh God no...",
+						"We're dead!",
+						"What the fuck?!"
+						);
+					C.SayIdle(
+						"Jesus Christ!",
+						"Son of a BITCH!",
+						"Stop jabbering, fucking RUN!",
+						"Shut up and run you idiots!",
+						"Fuck fuck fuck fuck fuck..."
+						);
+				}
+			}
+		}
+	}
+}

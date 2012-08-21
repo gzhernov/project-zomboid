@@ -1,0 +1,363 @@
+module SuburbsDistribution
+{
+	imports
+	{
+		Base
+	}
+	validmaps
+	{
+		50_50,
+	}
+	
+	containeritemdistribution
+	{
+		Room				= 			shed,
+		Containers			= 			counter,
+		Hammer				= 			1,
+		Plank				= 			10,
+		Nails				= 			12,
+	}
+
+	containeritemdistribution
+	{
+		Room				= 			shopGeneral,
+		Containers			= 			counter,
+		Bread				= 			10-20,
+		WhiskeyFull			= 			5-10,
+	}
+	containeritemdistribution
+	{
+		Containers			= 			counter/wardrobe/crate,
+		Pistol				= 			5,
+		Bullets9mm			= 			10-20,
+		BaseballBat			= 			5-10,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			counter/sidetable/crate,
+		Battery				= 			50,
+		Nails				= 			120,
+		Lighter				= 			20,
+		Torch				= 			25,
+		Pen					= 			30,
+		Pencil				= 			30,
+		Tissue				= 			50,
+		Candle				=			15,
+		Matches				=			15,
+	}
+
+	containeritemdistribution
+	{
+		Containers			=			officedrawers,
+		Battery				= 			50,
+		Nails				= 			20,
+		Lighter				= 			20,
+		Torch				= 			2,
+		Pen					= 			60,
+		Pencil				= 			60,
+		Tissue				= 			50,
+		WhiskeyFull			= 			5,
+		Chocolate			= 			40,
+		Pills				= 			5,
+		PillsBeta			= 			5,
+		PillsAntiDep		= 			5,
+		PillsSleepingTablets = 			5,
+		Crisps				= 			10,
+		Crisps2				= 			10,
+		Crisps3				= 			10,
+		Pop					= 			10,
+		Pop2				= 			10,
+		Pop3				= 			10,
+		Magazine			= 			10,
+		Newspaper			= 			10,
+		Book				= 			5,
+		Lollipop			=			10,
+		SheetPaper			=			20,
+		Matches				=			20,
+		Notebook			=			10,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			sidetable,
+		Tissue				= 			40,
+		Lighter				= 			20,
+		Battery				= 			20,
+		Pen					= 			30,
+		Pencil				= 			30,
+		Magazine			= 			10,
+		Newspaper			= 			10,
+		Book				= 			10,
+		Lollipop			=			5,
+		SheetPaper			=			10,
+		Notebook			=			15,
+		Cigarettes			=			10,
+		Matches				=			10,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			counter/sidetable/crate/fridge,
+		WhiskeyFull			= 			15,
+		Chocolate			= 			10,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			medicine,
+		Pills				= 			30,
+		PillsBeta			= 			30,
+		PillsAntiDep		= 			30,
+		PillsSleepingTablets = 			30,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			fridge,
+		Bread				= 			20,
+		Carrots				= 			20,
+		Steak				= 			15,
+		Chicken				= 			15,
+		Salmon				= 			20,
+		Carrots				= 			20,
+		Apple				= 			15,
+		Orange				= 			15,
+		Banana				= 			10,
+		Cheese				=			15,
+		Watermelon			= 			10,
+		Broccoli			=			15,
+		Pie					= 			15,
+		Peas				= 			15,
+		PopBottle			= 			15,
+		Butter				=			10,
+		Egg					=			10,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			vendingsnacks,
+		Crisps				= 			30,
+		Crisps2				= 			30,
+		Crisps3				= 			30,
+		TVDinner			=			10,
+		Pie					= 			10,
+
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			vendingpop,
+		Pop					= 			30,
+		Pop2				= 			30,
+		Pop3				= 			30,
+		PopBottle			= 			30,
+
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			wardrobe,
+		Sheet				= 			60,
+		Belt				= 			30,
+		Socks				= 			10,
+		Pillow				=			30,
+		Poolcue				=			5,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			bedroomdrawers,
+		Sheet				= 			30,
+		Vest				= 			40,
+		Sweater				= 			40,
+		Trousers			= 			40,
+		Shoes				= 			40,
+		Magazine			= 			20,
+		Book				= 			40,
+		Socks				= 			20,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			crate,
+		PetrolCan			= 			6,
+		Plank				= 			80,
+		Saw					= 			5,
+		Sledgehammer		= 			2,
+		Magazine			= 			10,
+		Newspaper			= 			30,
+		Book				= 			20,
+		TinnedSoup			= 			40,
+		TinnedBeans			=			30,
+		KitchenKnife		= 			5,	
+		TVDinner			=			15,
+		Coffee				= 			15,
+		Sugar				= 			15,
+		PopBottle			= 			15,
+		Teabag				= 			50,
+		TunaTin				= 			15,
+		Kettle				= 			15,
+		Mugl				= 			50,
+		Flour				=			5,
+		Lollipop			=			5,
+		Candle				=			15,
+	}
+	
+	containeritemdistribution
+	{
+		Containers			= 			bin,
+		PetrolCan			= 			1,
+		Plank				= 			5,
+		Tissue				= 			30,
+		Lighter				= 			5,
+		Battery				= 			5,
+		Pen					= 			5,
+		Pencil				= 			5,
+		Magazine			= 			10,
+		Newspaper			= 			15,
+		Socks				= 			4,
+		Lollipop			=			2,
+		Cigarettes			=			3,
+		SheetPaper				=			10,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			crate/counter,
+		Axe					= 			5,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			counter,
+		TinOpener			= 			15,
+		Pot					= 			20,
+		ButterKnife			= 			50,		
+		KitchenKnife		= 			20,		
+		Nails				= 			10,
+		TinnedSoup			= 			40,
+		TinnedBeans			=			30,
+		Bowl				=			80,
+		DishCloth			=			60,
+		TVDinner			=			20,
+		Mugl				= 			50,
+		Kettle				= 			20,
+		Coffee				= 			15,
+		Sugar				= 			15,
+		Teabag				= 			15,
+		TunaTin				= 			15,
+		Flour				=			15,
+		PeanutButter		=			10,
+		Pan					=			10,
+		RoastingPan			=			10,
+		Ramen				=			15,
+		Popcorn				=			15,
+	}
+
+	containeritemdistribution
+	{
+		Containers			= 			wardrobe,
+		Vest				= 			40,
+		Sweater				= 			40,
+		Trousers			= 			40,
+		Shoes				= 			40,
+		Magazine			= 			40,
+		Book				= 			20
+	}
+
+	flooritemdistribution
+	{
+		Zone				= 			foodItems,
+		TinnedSoup			= 			8,
+		Crisps				= 			8,
+		Crisps2				= 			8,
+		Crisps3				= 			8,
+		Pop					= 			8,
+		Pop2				= 			8,
+		Pop3				= 			8,
+		Coffee				= 			6,
+		Pie					= 			6,
+		Sugar				= 			6,
+		PopBottle			= 			6,
+		Teabag				= 			6,
+		TunaTin				= 			6
+	}
+
+	shelfitemdistribution
+	{
+		Zone				= 			shopShelvesFood,
+		LootedValue			= 			4,		/* Higher value means more items missing from shelves. */
+		Bread,
+		TinnedSoup,
+		TinnedBeans,
+		WhiskeyFull,
+		Pop,
+		Pop2,
+		Pop3,
+		Crisps,
+		Crisps2,
+		Crisps3,
+		Watermelon,
+	}
+
+	shelfitemdistribution
+	{
+		Zone				= 			StoreShelves,
+		LootedValue			= 			4,		/* Higher value means more items missing from shelves. */
+		Bread,
+		TinnedSoup,
+		TinnedBeans,
+		Pop,
+		Pop2,
+		Pop3,
+		Book,
+		Newspaper,
+		Magazine,
+		Book,
+	}
+
+	flooritemdistribution
+	{
+		Zone				= 			StoreFloor,
+		Bread				= 			2,
+		Pop				= 			2,
+		Pop2				= 			2,
+		Pop3				= 			2,
+		Crisps				= 			1,
+		Newspaper			= 			6,
+		Magazine			= 			6,
+		Coffee				= 			2,
+		Pie				= 			2,
+		Sugar				= 			2,
+		PopBottle			= 			2,
+		Teabag				= 			2,
+		TunaTin				= 			2,
+	}
+
+	shelfitemdistribution
+	{
+		Zone				= 			HardwareStoreShelves,
+		LootedValue			= 			4,		/* Higher value means more items missing from shelves. */
+		Hammer,
+		Doorknob,
+		Hinge,
+		TinOpener,
+		Nails,
+		Screwdriver,
+		Saw					= 			2,
+	}
+
+	flooritemdistribution
+	{
+		Zone				= 			HardwareStoreFloor,
+		Hammer				= 			4,
+		Nails				= 			4,
+		Doorknob			= 			2,
+		Hinge				= 			2,
+		Saw					= 			2,
+		Axe					=			0-1,
+		Sledgehammer 		=			0-1,
+	}
+	
+}

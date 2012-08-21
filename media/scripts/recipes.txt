@@ -1,0 +1,548 @@
+module Base
+{
+	recipe SpikedBat
+	{
+		BaseballBat,
+		Nails,
+		keep Hammer,
+		null,
+
+		BaseballBatNails,
+		5.0,
+	}
+	recipe SawnShotty
+	{
+		Shotgun,
+		keep Saw,
+		null,
+		null,
+
+		ShotgunSawnoff,
+		5.0,
+	}
+	
+	recipe SpikedPlank
+	{
+		Plank,
+		Nails,
+		keep Hammer,
+		null,
+
+		PlankNail,
+		5.0,
+	}
+
+	recipe Barricade
+	{
+		Plank=2,
+		Nails=2,
+		keep Hammer,
+		null,
+
+		Barricade,
+		5.0,
+	}
+	
+	recipe Crate
+	{
+		Plank=2,
+		Nails=2,
+		keep Hammer,
+		null,
+
+		Crate,
+		5.0,
+	}
+
+	recipe WindowFrame
+	{
+		Wall,
+		keep Saw,
+		null,
+		null,
+
+		WindowFrame,
+		5.0,
+	}
+	recipe DoorFrame
+	{
+		Wall,
+		keep Saw,
+		null,
+		null,
+
+		DoorFrame,
+		5.0,
+	}
+
+	recipe Wall
+	{
+		Plank=4,
+		Nails=4,
+		keep Hammer,
+		null,
+
+		Wall,
+		5.0,
+	}
+
+	recipe Stairs
+	{
+		Plank=4,
+		Nails=4,
+		keep Hammer,
+		null,
+
+		Stairs,
+		5.0,
+	}
+	
+	recipe WhiskeyFull
+	{
+		WhiskeyFull,
+		null,
+		null,
+		null,
+		
+		WhiskeyEmpty,
+		3.0
+	}
+	recipe WhiskeyHalf
+	{
+		WhiskeyHalf,
+		null,
+		null,
+		null,
+		
+		WhiskeyEmpty,
+		3.0
+	}
+	
+	recipe Molotov
+	{
+	   WineEmpty/WhiskeyEmpty,
+	   PetrolCan,
+	   DishCloth/RippedSheets/Socks,
+	   null,
+
+	   Molotov,
+	   3.0
+	}
+
+	recipe RippedSheets
+	{
+	   Sheet/Vest/Sweater/Trousers,
+	   null,
+	   null,
+	   null,
+
+	   RippedSheets,
+	   3.0
+	}
+	recipe SheetRope
+	{
+	   Sheet,
+	   null,
+	   null,
+	   null,
+
+	   SheetRope,
+	   3.0
+	}
+
+	recipe Door
+	{
+	   Plank=4,
+	   Hinge=2,
+	   Nails=5,
+	   Doorknob,
+
+	   Door,
+	   5.0
+	}
+
+	recipe Plank
+	{
+	   Log,
+	   keep Saw,
+	   null,
+	   null,
+
+	   Plank,
+	   5.0
+	}
+
+	recipe PotOfSoup
+	{
+	   TinnedSoup,
+	   keep TinOpener,
+	   Pot,
+	   null,
+
+	   PotOfSoup,
+	   5.0
+	}
+	
+
+	recipe WatermelonSliced
+	{
+	   Watermelon,
+	   keep KitchenKnife,
+	   null,
+	   null,
+
+	   WatermelonSliced,
+	   5.0
+	}
+	
+	recipe WatermelonSmashed
+	{
+	   Watermelon,
+	   keep Hammer,
+	   null,
+	   null,
+
+	   WatermelonSmashed,
+	   5.0
+	}
+	
+	recipe Beans
+	{
+	   TinnedBeans,
+	   keep TinOpener,
+	   null,
+	   null,
+
+	   OpenBeans,
+	   5.0
+	}
+	
+	recipe BeanBowl
+	{
+	   OpenBeans,
+	   Bowl,
+	   null,
+	   null,
+
+	   BeanBowl,
+	   5.0
+	}
+	
+	recipe BeanBowl2
+	{
+	   TinnedBeans,
+	   keep TinOpener,
+	   Bowl,
+	   null,
+
+	   BeanBowl,
+	   5.0
+	}
+
+	recipe  HotDrink
+	{
+	  	Coffee/Teabag,
+	  	keep FullKettle,
+	  	Mugl,
+	 	Sugar,
+
+	  	Mugfulll,
+	  	1.0
+	}
+
+	recipe TunaOpen
+	{
+	  	TunaTin,
+	  	keep TinOpener,
+	  	null,
+	 	null,
+
+	  	TunaTinOpen,
+	  	0.4
+	}
+	
+	
+	recipe WatermelonSliced2
+	{
+	   Watermelon,
+	   keep Axe,
+	   null,
+	   null,
+
+	   WatermelonSliced,
+	   5.0
+	}
+	
+	recipe WatermelonSliced3
+	{
+	   Watermelon,
+	   keep Saw,
+	   null,
+	   null,
+
+	   WatermelonSliced,
+	   5.0
+	}
+	
+	recipe WatermelonSmashed2
+	{
+	   Watermelon,
+	   keep Sledgehammer,
+	   null,
+	   null,
+
+	   WatermelonSmashed,
+	   5.0
+	}
+	
+	recipe WatermelonSmashed3
+	{
+	   Watermelon,
+	   keep Log,
+	   null,
+	   null,
+
+	   WatermelonSmashed,
+	   5.0
+	}
+
+	recipe WatermelonSmashed4
+	{
+	   Watermelon,
+	   keep Plank,
+	   null,
+	   null,
+
+	   WatermelonSmashed,
+	   5.0
+	}
+
+	recipe WatermelonSmashed5
+	{
+	   Watermelon,
+	   keep BaseballBat,
+	   null,
+	   null,
+
+	   WatermelonSmashed,
+	   5.0
+	}
+
+	recipe WatermelonSmashed6
+	{
+	   Watermelon,
+	   keep BaseballBatNails,
+	   null,
+	   null,
+
+	   WatermelonSmashed,
+	   5.0
+	}
+
+	recipe SoupBowl4
+	{
+		PotOfSoup,
+		Bowl=4,
+		null,
+		null,
+		
+		SoupBowl4,
+		5.0
+	}
+	
+	recipe RamenBowl
+	{
+		WaterBowl,
+		Ramen,
+		null,
+		null,
+		
+		RamenBowl,
+		5.0
+	}
+
+	
+	recipe CandleLit
+{
+ Candle,
+ Matches/Lighter,
+ null,
+ null,
+
+
+ CandleLit,
+ 5.0
+}
+
+recipe CheeseSandwich
+{
+Bread,
+Cheese,
+null,
+null,
+
+CheeseSandwich,
+5.0
+}
+
+
+recipe GrilledCheese
+{
+Bread,
+Butter,
+Cheese,
+keep Pan,
+
+GrilledCheese,
+5.0
+}
+
+recipe GrilledCheese2
+{
+CheeseSandwich,
+Butter,
+keep Pan,
+null,
+
+GrilledCheese,
+5.0
+} 
+
+ recipe BCCCasserole
+ {
+ Chicken,
+ Cheese,
+ Broccoli,
+ RoastingPan,
+
+
+ BCCCasserole,
+ 5.0
+ }
+
+
+ recipe BoringSoup
+ {
+ WaterPot,
+ Broccoli/Peas/Carrots/BeansOpen/Chicken/Steak/Salmon/TunaTinOpen,
+ null,
+ null,
+ 
+ BoringSoup,
+ 5.0
+ }
+ 
+ recipe SimpleSoup
+ {
+ WaterPot,
+ Broccoli/Peas/Carrots/BeansOpen/Chicken/Steak/Salmon/TunaTinOpen,
+ Broccoli/Peas/Carrots/BeansOpen/Chicken/Steak/Salmon/TunaTinOpen/Butter/Cheese/Egg/Flour/Sugar,
+ null,
+ 
+ SimpleSoup,
+ 5.0
+ }
+ 
+ recipe TastySoup
+ {
+ WaterPot,
+ Broccoli/Peas/Carrots/BeansOpen/Chicken/Steak/Salmon/TunaTinOpen,
+ Butter/Cheese/Egg/Flour/Sugar/Broccoli/Peas/Carrots/BeansOpen/Chicken/Steak/Salmon/TunaTinOpen,
+ Butter/Cheese/Egg/Flour/Sugar/Broccoli/Peas/Carrots/BeansOpen/Chicken/Steak/Salmon/TunaTinOpen,
+ 
+ TastySoup,
+ 5.0,
+ TastySoup_TestIsValid,
+ TastySoup_OnCreate,
+ TastySoup_OnGrab,
+ } 
+ 
+ recipe BoringBowl4
+ {
+ BoringSoup,
+ Bowl=4,
+ null,
+ null,
+ 
+ BoringBowl4,
+ 5.0
+ }
+ 
+ recipe SimpleBowl4
+ {
+ SimpleSoup,
+ Bowl=4,
+ null,
+ null,
+ 
+ SimpleBowl4,
+ 5.0
+ }
+ 
+ recipe TastyBowl4
+ {
+ TastySoup,
+ Bowl=4,
+ null,
+ null,
+ 
+ TastyBowl4,
+ 5.0
+ }
+
+ recipe Journal
+ {
+ Notebook,
+ Pen/Pencil,
+ null,
+ null,
+ 
+ Journal,
+ 3.0
+ }
+
+ 
+ 
+ recipe TorchBatteryRemoval
+ {
+ keep Torch,
+ null,
+ null,
+ null,
+ 
+ Battery,
+ 3.0,
+ TorchBatteryRemoval_TestIsValid,
+ TorchBatteryRemoval_OnCreate,
+ TorchBatteryRemoval_OnGrab,
+ 
+ }
+ 
+ recipe TorchBatteryInsert
+ {
+ Torch,
+ Battery,
+ null,
+ null,
+ 
+ Torch,
+ 3.0,
+ TorchBatteryInsert_TestIsValid,
+ TorchBatteryInsert_OnCreate,
+ TorchBatteryInsert_OnGrab,
+ 
+ }
+
+ recipe Doodle
+ {
+ SheetPaper,
+ Pen/Pencil,
+ null,
+ null,
+ 
+ Doodle,
+ 3.0
+ }
+
+		
+}

@@ -1,0 +1,143 @@
+module Base
+{
+	randomselector MeetAgainTeamUp
+	{
+		MeetAgainTeamUpA,
+		MeetAgainTeamUpPassive,
+	}
+	
+	instancescript MeetAgainTeamUpPassive
+	{
+		Met.AddToGroup(Other);
+	}
+	
+	instancescript MeetAgainTeamUpA
+	{
+		if(Other.IsAggressive())
+		{
+			Other.SayIdle(
+				"Jesus, you want to get yourself killed? Stick with me.",
+				"We should stick together.",
+				"Jesus, those fucks are everywhere! I'll stick with you.",
+				"Fucking millions of those things - we should stick together."
+				);
+		}
+		else
+		{
+			if(Other.IsFriendly())
+			{
+				Other.SayIdle(
+					"Hey, I could use a friend around here.",
+					"Let's stick together, it's safer.",
+					"Hey buddy! We should team up!",
+					"Mind if I tag along?",
+					"Can I come with you?",
+					"I'll follow you, if that's okay?",
+					"Do you mind if I come with you?"
+					);
+			}
+			else
+			{
+				Other.SayIdle(
+					"Hey, I'll tag along with you.",
+					"We should stick together.",
+					"I'll tag along with you.",
+					"I'll follow you."
+					);
+			}
+		}
+		
+		if(Met.TestStat("Loner") && !Met.IsPlayer())
+		{	
+			if(Met.IsAggressive())
+			{
+				Met.SayIdle(
+					"And have you get me killed? Fuck that!",
+					"Fuck off.",
+					"Fuck you.",
+					"Get away from me.",
+					"Leave me alone."
+					);
+			}
+			else
+			{
+				if(Met.IsFriendly())
+				{
+					Met.SayIdle(
+						"I'm sorry. I can't help you.",
+						"It's best you go on your way.",
+						"That's not a good idea. Sorry.",
+						"You're better off finding someone else."
+						);
+				}
+				else
+				{
+					Met.SayIdle(
+						"I work alone.",
+						"I'm better off by myself.",
+						"I don't need anyone getting me killed.",
+						"I can take care of myself.",
+						"I'm better off on my own."
+						);
+				}
+			}					
+		}
+		else
+		{
+			if(Met.IsPlayer())
+			{
+				if(Met.IsAggressive())
+				{
+					Met.SayIdle(
+						"Fuck off.",
+						"Fuck you.",
+						"And have you get me killed? Fuck that!",
+						"Get away from me!",
+						"Leave me alone."
+						);
+				}
+				else
+				{
+					if(Met.IsFriendly())
+					{
+						Met.SayIdle(
+							"Sure thing! I'm $FIRSTNAME$.",
+							"Yeah cool. My name's $FIRSTNAME$, by the way.",
+							"Cool. I'm $FIRSTNAME$.",
+							"Good to meet you, I'm $FIRSTNAME$."
+							);
+						
+						Other.SayIdle(
+							"Thanks! I'm $FIRSTNAME$.",
+							"Great! I'm $FIRSTNAME$.",
+							"Nice to meet you, I'm $FIRSTNAME$.",
+							"$SURNAME$. $FIRSTNAME$ $SURNAME$."
+							);
+					}
+					else
+					{
+						Met.SayIdle(
+							"Whatever.",
+							"If you want. Just don't get in my way.",
+							"If you like.",
+							"I can't stop you.",
+							"Please yourself."
+							);
+					}
+				}
+			}
+			else
+			{
+				/* they are both NPCs */
+				Met.AddToGroup(Other);
+				Met.SayIdle(
+					"Sure, why not?",
+					"Yeah - I'll look out for you.",
+					"No problem - just don't go getting me killed.",
+					"Yeah, sure thing."
+					);
+			}
+		}
+	
+	}
+}

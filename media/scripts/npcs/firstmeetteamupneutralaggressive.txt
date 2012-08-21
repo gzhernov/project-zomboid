@@ -1,0 +1,207 @@
+module Base
+{
+
+	randomselector FirstMeetTeamupNeutralAggressive
+	{
+		FirstMeetTeamupNeutralAggressive1,
+		FirstMeetTeamupNeutralAggressive2,
+		FirstMeetTeamupNeutralAggressive3,
+		FirstMeetTeamupNeutralAggressive4,
+		FirstMeetTeamupNeutralAggressive5,
+		FirstMeetTeamupNeutralAggressive6,
+		FirstMeetTeamupNeutralAggressive8,
+		FirstMeetTeamupNeutralAggressive9,
+		FirstMeetTeamupNeutralAggressive10,
+		
+	}
+
+	instancescript FirstMeetTeamupNeutralAggressive1
+	{
+		Other.SayIdle(
+				"I need some help taking these dead guys down. You in?"
+			);
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Sure, I guess we'd be safer."
+			);
+		Other.SayIdle(
+				"Safer, yeah. For sure..."
+			);
+			
+		Met.Order(Follow, Other, 2);
+	}
+	
+	instancescript FirstMeetTeamupNeutralAggressive2
+	{
+		Other.SayIdle(	"These bastards. The more I kill, the more drag themselves round the corner..."	);
+		Other.SayIdle(	"Want to team up? Bust some heads?"	);
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Okay. Guess the more we kill, the less there'll be breaking down the doors too."
+			);
+		Other.SayIdle(
+				"You get bit though, I'll kill you. Straight off."
+			);
+		Other.SayIdle(
+				"Won't even say 'Please'."
+			);
+		Met.SayIdle(
+				"Well, I guess that's fair..."
+			);
+		}
+		
+		Met.Order(Follow, Other, 2);
+
+	instancescript FirstMeetTeamupNeutralAggressive3
+	{
+		Other.SayIdle(	"Hey you ever heard of safety in numbers?"	);
+		Met.SayIdle(
+				"Sure I have. Do I look an idiot?"
+			);
+		Other.SayIdle(
+				"I want some of that safety in numbers. You in?"
+			);
+		Met.SayIdle(
+				"You asking to team up?"
+			);
+		Other.SayIdle(
+				"I'm askin' about bettering my chances of living through this damn mess."
+			);
+			Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Then I guess that makes us new best friends..."
+			);
+		Other.SayIdle(
+				"Howdy Neighbor..."
+			);
+			
+		Met.Order(Follow, Other, 2);
+	}
+
+	instancescript FirstMeetTeamupNeutralAggressive4
+	{
+		Other.SayIdle(	"Hey, I'm clearing the Neighborhood. Want in?"	);
+		Met.SayIdle(
+				"Depends. You got any human blood in that mess you're covered in?"
+			);
+		Other.SayIdle(
+				"A little. You wouldn't have liked him. Bad guy."
+			);
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Sure, I'll tag along. I'm watchin' you though."
+			);
+		Other.SayIdle(
+				"Those are the times we live in man, the times we live in..."
+			);
+	
+Met.Order(Follow, Other, 2);
+	}
+	
+	instancescript FirstMeetTeamupNeutralAggressive5
+	{
+		Other.SayIdle(	"These bastards don't know what hit 'em."	);
+		Met.SayIdle(
+				"From the looks of it, you hit 'em. Lots of times."
+			);
+		Other.SayIdle(
+				"Damn straight I did. You want in? Team up?"
+			);
+			Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Sure. Better to be behind the maniac than out in front..."
+			);
+		Other.SayIdle(
+				"You watch your damned mouth, partner."
+			);
+			
+			Other.Anger(20);
+	
+			Met.Order(Follow, Other, 2);
+	
+	}
+	
+	instancescript FirstMeetTeamupNeutralAggressive6
+	{
+		Met.SayIdle(
+				"You look like you've been busy. "
+			);
+		Other.SayIdle(	"Only way we're going to get through this shit is to reclaim the streets."	);
+		Other.SayIdle(
+				"You want to team up? A grunt like you'll survive longer that way...?"
+			);
+			Other.AddToGroup(Met);
+		Met.SayIdle(
+				"I don't have many options right now, do I?"
+			);
+		Other.SayIdle(
+				"No sir. No, you do not."
+			);
+			
+			Met.Order(Follow, Other, 2);
+	
+	}
+	
+	instancescript FirstMeetTeamupNeutralAggressive8
+	{
+		Other.SayIdle(	"You're teaming up with me buddy."	);
+		Met.SayIdle(
+				"What? What if I say 'No'?"
+			);
+		Other.SayIdle(
+				"Then we just found a whole bunch of new ways to die."
+			);
+		
+		Other.AddToGroup(Met);
+			Met.SayIdle(
+				"Guess if you're still breathing, you're on my side..."
+			);
+		Other.SayIdle(
+				"You said it."
+			);
+			
+			Met.Order(Follow, Other, 2);
+		
+	}
+	instancescript FirstMeetTeamupNeutralAggressive9
+	{
+		Other.SayIdle(	"Hey you! You're on my side now!"	);
+		Met.SayIdle(
+				"What happened to 'please' and 'thank you'?"
+			);
+		Other.SayIdle(
+				"They got chucked the second I broke the mailman's neck with a nail-bat."
+			);
+		
+		Other.AddToGroup(Met);
+			Met.SayIdle(
+				"I get your drift. I'll come with..."
+			);
+			
+			Met.Order(Follow, Other, 2);
+	
+		
+	}
+	instancescript FirstMeetTeamupNeutralAggressive10
+	{
+		Other.SayIdle(	"Hey, want to join forces?"	);
+		Met.SayIdle(
+				"You promise not to shoot me in the back?"
+			);
+		Other.SayIdle(
+				"I don't make promises."
+			);
+		Other.SayIdle(
+				"Sure as hell won't bite at your crotch though..."
+			);
+		
+		Other.AddToGroup(Met);
+		Met.SayIdle(
+				"Right now, that's just about good enough."
+			);
+	
+		Met.Order(Follow, Other, 2);
+		
+	}
+	
+}

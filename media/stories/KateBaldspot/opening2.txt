@@ -1,0 +1,233 @@
+module KateAndBaldspot_SoupMaking
+{
+
+	waypoint OutsideSoupHouse
+	{
+		67, 17, 0
+	}
+
+	waypoint ZombieSpawnLocation
+	{
+		66, 6, 0
+	}
+
+	waypoint SafehouseKitchen
+	{
+		42, 22, 0
+	}
+
+	waypoint TutorialStovePosition
+	{
+		39, 21, 0
+	}
+
+	/* can also be specified in map */
+	zone TutorialAlarmZombieSpawn
+	{
+		46, 26,			/* Top left */
+		55, 29				/* Lower right */
+	}
+
+	activatable TutorialStove
+	{
+		stove, 39, 21, 0
+	}
+
+	container TutorialStoveContainer
+	{
+		stove, 39, 21, 0
+	}
+
+	talker TutorialRadio
+	{
+		radio,
+		39, 22, 1
+	}
+
+	/*******************************************************************************************
+	**	Settable script flags...
+	********************************************************************************************/
+
+	/* Flag to determine if we're allowed to drag kate (set when fire breaks out) */
+	scriptflag CanDragKate
+	{
+		no  /* initial value */
+	}
+
+	/*******************************************************************************************
+	**	Custom trigger to start fire once you run downstairs after 'smell burning?'
+	********************************************************************************************/
+	customtrigger CustomStartFire
+	{
+		Player.IsOnFloor(0),
+		call SetFire
+	}
+
+	/*******************************************************************************************
+	**	Custom trigger to do alarm beep sound
+	********************************************************************************************/
+	customtrigger CustomDoAlarmSound
+	{
+		TimeSinceLastRan(0.5),	/* Only runs DoAlarmBeep every 0.5 seconds */
+		call DoAlarmBeep
+	}
+
+	/*******************************************************************************************
+	**	Quest conditions for soup quest.
+	********************************************************************************************/
+	questcondition SoupCooking
+	{
+		TutorialStove.IsActivated() && TutorialStoveContainer.HasInventory(PotOfSoup)
+	}
+
+	/*******************************************************************************************
+	**	Making some soup for your lovely wife! Didn't it go well?
+	********************************************************************************************/
+	script CreateMakeSoupQuest
+	{
+		Quest.CreateQuest("MakeSoupQuest",  @MakeSoupQuestLanguage-0);
+			Quest.AddFindItemTask( "a",@MakeSoupQuestLanguage-1, Pot, 1 );
+				Quest.Unlock();
+				Quest.UnlockNextTasksOnComplete(1);
+			Quest.AddFindItemTask( "b", @MakeSoupQuestLanguage-2, PotOfSoup, 1 );
+				Quest.UnlockNextTasksOnComplete(1);
+			Quest.AddScriptConditionTask( "c", @MakeSoupQuestLanguage-3, "SoupCooking" );
+				Quest.RunScriptOnComplete("RadioWorks");		
+	}
+
+	/*******************************************************************************************
+	**	Fast Food quest - Go next door and battle a zombie, before collecting soup and returning to safehouse.
+	********************************************************************************************/
+	script CreateFastFoodQuest
+	{
+		Quest.CreateQuest("FastFoodQuest", @FastFoodQuestLanguage-0 );
+			
+			/* 	Invisible task, spotting the zombie is put first, unlocked but hid so once it's completed (by spotting the zombie) 
+				it will unlock the 'kill the zombie' quest which will take precedence over getting food. 
+				Since it's the first unlocked task which displays. 
+			*/
+			Quest.AddHardCodedTask( "tutorialaaa", "", "spotzombie" );
+				Quest.UnlockButHide();
+				Quest.UnlockTaskOnComplete( "tutorialCa" );
+			Quest.AddHardCodedTask("tutorialA", @FastFoodQuestLanguage-1, "PlayerOutside" );
+				Quest.Unlock();
+				Quest.UnlockNextTasksOnComplete(1);
+			Quest.AddGotoLocationTask("tutorialB", @FastFoodQuestLanguage-2, OutsideSoupHouse );
+				Quest.RunScriptOnComplete("SpawnZombieOnFastFood");
+				Quest.UnlockTaskOnComplete("tutorialC");
+			Quest.AddHardCodedTask( "tutorialCa", @FastFoodQuestLanguage-3, "killzombie" );
+			Quest.AddFindItemTask( "tutorialC", @FastFoodQuestLanguage-4, TinnedSoup, 1 );
+				Quest.UnlockNextTasksOnComplete(1);
+			Quest.AddGotoLocationTask( "tutorialD", @FastFoodQuestLanguage-5, SafehouseKitchen );
+				Quest.RunScriptOnComplete("WeGotSoup");
+	}
+
+	/*******************************************************************************************
+	**	Called in opening.txt once you've woke up after a lovely nights sleep with Kate.
+	********************************************************************************************/
+	script WokeUpInTutorialBed
+	{
+		Wait(1.0);
+		if(Player.HasInventory(Hammer))
+		{
+			Kate.Say(@WokeUpInTutorialBedLanguage-0);		
+		}
+		
+		Player.Say(@WokeUpInTutorialBedLanguage-1);
+		Kate.Say(@WokeUpInTutorialBedLanguage-2);
+		Kate.Say(@WokeUpInTutorialBedLanguage-3);
+
+		Player.Say(@WokeUpInTutorialBedLanguage-4);
+		
+		Quest.UnlockQuest("FastFoodQuest");		
+	}
+
+	/*******************************************************************************************
+	**	Spawns a zombie in the kitchen. Called when you hit outside of the soup house next door.
+	********************************************************************************************/
+	script SpawnZombieOnFastFood
+	{
+		World.SpawnZombie(ZombieSpawnLocation);
+		Tutorial.SetZombieLimit(1);
+	}
+
+	/*******************************************************************************************
+	**	Called when Bob returns to safehouse kitchen from next door.
+	********************************************************************************************/
+	script WeGotSoup
+	{
+		Player.Say( "We got soup!");
+		Kate.Say( "Think you can manage that?");
+		Player.Say( "Ha! This kitchen is pretty beat up, but I think I remember!" );
+		Quest.UnlockQuest("MakeSoupQuest");
+	}
+
+	/*******************************************************************************************
+	**	Called after soup is put in oven and oven is turned on.
+	********************************************************************************************/
+	script RadioWorks
+	{
+		Kate.Say("Honey! It's working!");
+		Kate.Say("This piece of shit radio picked something up!");
+		
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("Day six of the Knox County event and the army has warned camps...");	} else	{ TutorialRadio.Say("Day six........Knox County..............army...........camps...");	}
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("...of concerned relatives of Muldraugh citizens...");	} else	{ TutorialRadio.Say("...............relatives..............citizens...");	}
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("...that if they do not return home they will be forcibly dispersed.");	} else	{ TutorialRadio.Say("..............return home...............forcibly dispersed.");	}
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("The President has released a statement asking for calm and patience");	} else	{ TutorialRadio.Say("The President..........statement........calm............. ");	}
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("but key Republicans have been quick to attack what they're calling a 'do nothing' agenda.");	} else	{ TutorialRadio.Say("........Republicans..........quick to attack...............agenda.");	}
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("With the communication blackout and no fly zone firmly in place...");	} else	{ TutorialRadio.Say("........communication...........no fly zone...........");	}
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("...there's still no clue as to the nature of the outbreak.");	} else	{ TutorialRadio.Say("......................nature...........outbreak.");	}
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("Pictures released by US forces, however, show crowded streets...");	} else	{ TutorialRadio.Say("...............US forces..........crowded streets...");	}
+		if(Player.IsOnFloor(1)) {	TutorialRadio.Say("...suggesting that, despite it all, the townsfolk of Muldraugh are living as normal.");	} else	{ TutorialRadio.Say("............townsfolk.........living....normal.");	}
+
+		if(TutorialStove.IsActivated() && TutorialStoveContainer.HasInventory(PotOfSoup))
+		{
+			Kate.Say("Can you smell burning?");
+			CustomStartFire.ProcessAlways(); /* sets our custom trigger to start processing every frame. */
+		}
+		else
+		{
+			call KateAndBaldspot_RaiderSection.RaiderEnter;
+		}	
+	}
+
+	/*******************************************************************************************
+	**	Sets fire on stove...
+	********************************************************************************************/
+	script SetFire
+	{
+		CustomStartFire.ProcessNever(); /* We've processed the trigger now. Disable it so it doesn't call this script and set the fire every frame. */
+		
+		World.StartFire(TutorialStovePosition, 500000); /* Set the fire at the stove location, give it a whole load of potential energy so it spreads fast. */
+		
+		/* Start both the timed triggers to do the actual alarm sound effect and NPC hearable world sound. */
+		CustomDoAlarmSound.ProcessAlways();
+		
+		CanDragKate.Set(yes);	/* Set it so kate is draggable (tested in game code for now) */
+		
+		Player.Say("Oh shit...");
+		Tutorial.DisableTutorialZombieControl();
+		
+		/* Spawn zombies, in several delayed batches, to ease load on CPU */
+		World.CreateZombieSwarm( 20, TutorialAlarmZombieSpawn ); 	
+		Wait(1);
+		World.CreateZombieSwarm( 20, TutorialAlarmZombieSpawn ); 	
+		Wait(1);
+		World.CreateZombieSwarm( 10, TutorialAlarmZombieSpawn ); 	
+
+		/* Attract spawned zombies to stove with a single sound 40 radius. */
+		World.PlayWorldSound(TutorialStovePosition, 40, 40);	
+		
+		/* Do alarm sfx for 30 seconds... not including the zombie spawn delays */
+		Wait(28.0f);
+		
+		/* Then stop. */
+		CustomDoAlarmSound.ProcessNever();
+		
+	}
+
+	script DoAlarmBeep
+	{	
+		World.PlaySoundEffect("WAV", "firealarm", TutorialStovePosition, 0.0, 30, 0.6, false); /* Play the fire alarm beep sound effect to the player. */
+	}
+}

@@ -1,0 +1,49 @@
+module Base
+{
+
+	instancescript MeetAgainAlreadyGroupMembers
+	{
+		if(Other.IsInGroup())
+		{
+			callwait MeetAgainOtherInAGroup;
+		}
+		else
+		{
+			if(Other.IsInGroup())
+			{
+				callwait MeetAgainMetInAGroup;
+			}
+		}
+	}
+	
+	randomselector MeetAgainOtherInAGroup
+	{
+		MeetAgainOtherInAGroupA
+	}
+	
+	instancescript MeetAgainOtherInAGroupA
+	{
+		if(Other.IsAggressive())
+		{
+			Other.SayIdle(
+				"Blah blah I'm in a group."
+				);
+		}
+		else
+		{
+			Other.SayIdle(
+				"Hello again!"
+				);
+		}
+	}
+	
+	randomselector MeetAgainMetInAGroup
+	{
+		MeetAgainMetInAGroupA
+	}
+	
+	instancescript MeetAgainMetInAGroupA
+	{
+		Met.SayIdle("Blah blah I'm in a group.");
+	}
+}
